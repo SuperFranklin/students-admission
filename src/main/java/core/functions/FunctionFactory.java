@@ -33,6 +33,9 @@ public class FunctionFactory {
         if(functionExp.equals("W_AVG")){
             return new WAVGFunction(expression,parameters);
         }
+        if(functionExp.equals("LOCAL_PREF")){
+            return new LocalPrefFunction(parameters);
+        }
 
         return null;
     }

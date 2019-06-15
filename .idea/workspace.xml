@@ -2,9 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="69fdcd23-9ebb-421a-b5f7-7c61ad1a86e7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/core/functions/WAVGFunction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/core/functions/LocalPrefFunction.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/core/functions/FunctionFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/core/functions/FunctionFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/core/functions/GPAFunction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/core/functions/GPAFunction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/core/functions/WAVGFunction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/core/functions/WAVGFunction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/core/functions/WorstFunction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/core/functions/WorstFunction.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/StudentAdmissionCalculatorFacadeTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/StudentAdmissionCalculatorFacadeTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/core/functions/FunctionFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/core/functions/FunctionFactory.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/StudentAdmissionCalculatorFacadeTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/StudentAdmissionCalculatorFacadeTests.class" afterDir="false" />
@@ -54,7 +57,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="extract.method.default.visibility" value="private" />
-    <property name="last.edited.regexp" value="LL,BEST[ICT,Gr,Hi,BS,LS,AC,Ec]]" />
+    <property name="last.edited.regexp" value="1LOCAL_PREF[]" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../Desktop/Test" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -88,7 +91,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.StudentAdmissionCalculatorFacadeTests.testRanking3">
+  <component name="RunManager" selected="JUnit.StudentAdmissionCalculatorFacadeTests">
     <configuration name="Unnamed" type="Application" factoryName="Application" nameIsGenerated="true">
       <module name="ExpressionsLIbrary" />
       <method v="2">
@@ -100,16 +103,6 @@
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="StudentAdmissionCalculatorFacadeTests" />
       <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="StudentAdmissionCalculatorFacadeTests.testRanking1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="expressions-library" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="StudentAdmissionCalculatorFacadeTests" />
-      <option name="METHOD_NAME" value="testRanking1" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -134,11 +127,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="StudentAdmissionCalculatorFacadeTests.testWithParenthesis17" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="StudentAdmissionCalculatorFacadeTests.testRanking6" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="expressions-library" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="StudentAdmissionCalculatorFacadeTests" />
-      <option name="METHOD_NAME" value="testWithParenthesis17" />
+      <option name="METHOD_NAME" value="testRanking6" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="StudentAdmissionCalculatorFacadeTests.testRanking7" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="expressions-library" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="StudentAdmissionCalculatorFacadeTests" />
+      <option name="METHOD_NAME" value="testRanking7" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -194,18 +197,18 @@
     <list>
       <item itemvalue="Application.Unnamed" />
       <item itemvalue="JUnit.StudentAdmissionCalculatorFacadeTests" />
-      <item itemvalue="JUnit.StudentAdmissionCalculatorFacadeTests.testWithParenthesis17" />
-      <item itemvalue="JUnit.StudentAdmissionCalculatorFacadeTests.testRanking1" />
       <item itemvalue="JUnit.StudentAdmissionCalculatorFacadeTests.testRanking2" />
       <item itemvalue="JUnit.StudentAdmissionCalculatorFacadeTests.testRanking3" />
+      <item itemvalue="JUnit.StudentAdmissionCalculatorFacadeTests.testRanking6" />
+      <item itemvalue="JUnit.StudentAdmissionCalculatorFacadeTests.testRanking7" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.StudentAdmissionCalculatorFacadeTests.testRanking3" />
         <item itemvalue="JUnit.StudentAdmissionCalculatorFacadeTests" />
+        <item itemvalue="JUnit.StudentAdmissionCalculatorFacadeTests.testRanking7" />
+        <item itemvalue="JUnit.StudentAdmissionCalculatorFacadeTests.testRanking6" />
+        <item itemvalue="JUnit.StudentAdmissionCalculatorFacadeTests.testRanking3" />
         <item itemvalue="JUnit.StudentAdmissionCalculatorFacadeTests.testRanking2" />
-        <item itemvalue="JUnit.StudentAdmissionCalculatorFacadeTests.testRanking1" />
-        <item itemvalue="JUnit.StudentAdmissionCalculatorFacadeTests.testWithParenthesis17" />
       </list>
     </recent_temporary>
   </component>
@@ -231,7 +234,8 @@
       <workItem from="1560528040389" duration="81000" />
       <workItem from="1560528294963" duration="4516000" />
       <workItem from="1560547740825" duration="322000" />
-      <workItem from="1560578731891" duration="14033000" />
+      <workItem from="1560578731891" duration="18591000" />
+      <workItem from="1560625759605" duration="1925000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1560471616169</created>
@@ -275,7 +279,14 @@
       <option name="project" value="LOCAL" />
       <updated>1560591818218</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="weighted average implementation">
+      <created>1560595923455</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1560595923455</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -300,20 +311,31 @@
     <MESSAGE value="another tests and fixes" />
     <MESSAGE value="added equal operator" />
     <MESSAGE value="ranking calculation implementation and tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="ranking calculation implementation and tests" />
+    <MESSAGE value="weighted average implementation" />
+    <option name="LAST_COMMIT_MESSAGE" value="weighted average implementation" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/core/functions/WAVGFunction.java</url>
-          <line>27</line>
-          <option name="timeStamp" value="140" />
+          <line>34</line>
+          <option name="timeStamp" value="147" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/core/functions/GPAFunction.java</url>
-          <line>20</line>
-          <option name="timeStamp" value="141" />
+          <line>23</line>
+          <option name="timeStamp" value="148" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/core/functions/WAVGFunction.java</url>
+          <line>63</line>
+          <option name="timeStamp" value="149" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/core/functions/WAVGFunction.java</url>
+          <line>40</line>
+          <option name="timeStamp" value="150" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

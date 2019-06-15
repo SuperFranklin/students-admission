@@ -15,6 +15,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import static org.junit.Assert.assertEquals;
+
 public class StudentAdmissionCalculatorFacadeTests {
 
 
@@ -50,7 +52,7 @@ public class StudentAdmissionCalculatorFacadeTests {
         String expression = "GPA[all]>2.5";
         StudentAdmissionCalculatorFacade studentAdmissionCalculatorFacade = new StudentAdmissionCalculatorFacadeImpl();
         boolean qualified = studentAdmissionCalculatorFacade.isQualified(expression, params);
-        Assert.assertEquals(true, qualified);
+        assertEquals(true, qualified);
     }
 
     @Test
@@ -64,7 +66,7 @@ public class StudentAdmissionCalculatorFacadeTests {
         String expression = "GPA[all]>2.5";
         StudentAdmissionCalculatorFacade studentAdmissionCalculatorFacade = new StudentAdmissionCalculatorFacadeImpl();
         boolean qualified = studentAdmissionCalculatorFacade.isQualified(expression, params);
-        Assert.assertEquals(false, qualified);
+        assertEquals(false, qualified);
     }
     @Test
     public void testWithoutParenthesis3(){
@@ -77,7 +79,7 @@ public class StudentAdmissionCalculatorFacadeTests {
         String expression = "GPA[all]>2.5";
         StudentAdmissionCalculatorFacade studentAdmissionCalculatorFacade = new StudentAdmissionCalculatorFacadeImpl();
         boolean qualified = studentAdmissionCalculatorFacade.isQualified(expression, params);
-        Assert.assertEquals(false, qualified);
+        assertEquals(false, qualified);
     }
     @Test
     public void testWithoutParenthesis4(){
@@ -90,7 +92,7 @@ public class StudentAdmissionCalculatorFacadeTests {
         String expression = "GPA[all]>2.5";
         StudentAdmissionCalculatorFacade studentAdmissionCalculatorFacade = new StudentAdmissionCalculatorFacadeImpl();
         boolean qualified = studentAdmissionCalculatorFacade.isQualified(expression, params);
-        Assert.assertEquals(true, qualified);
+        assertEquals(true, qualified);
     }
     @Test
     public void testWithoutParenthesis5(){
@@ -103,7 +105,7 @@ public class StudentAdmissionCalculatorFacadeTests {
         String expression = "GPA[all]>=2.0";
         StudentAdmissionCalculatorFacade studentAdmissionCalculatorFacade = new StudentAdmissionCalculatorFacadeImpl();
         boolean qualified = studentAdmissionCalculatorFacade.isQualified(expression, params);
-        Assert.assertEquals(true, qualified);
+        assertEquals(true, qualified);
     }
     @Test
     public void testWithoutParenthesis6(){
@@ -115,7 +117,7 @@ public class StudentAdmissionCalculatorFacadeTests {
         String expression = "G[WORST[all]]>=C";
         StudentAdmissionCalculatorFacade studentAdmissionCalculatorFacade = new StudentAdmissionCalculatorFacadeImpl();
         boolean qualified = studentAdmissionCalculatorFacade.isQualified(expression, params);
-        Assert.assertEquals(false, qualified);
+        assertEquals(false, qualified);
     }
     @Test
     public void testWithoutParenthesis7(){
@@ -127,7 +129,7 @@ public class StudentAdmissionCalculatorFacadeTests {
         String expression = "G[WORST[all]]>=C";
         StudentAdmissionCalculatorFacade studentAdmissionCalculatorFacade = new StudentAdmissionCalculatorFacadeImpl();
         boolean qualified = studentAdmissionCalculatorFacade.isQualified(expression, params);
-        Assert.assertEquals(true, qualified);
+        assertEquals(true, qualified);
     }
     @Test
     public void testWithoutParenthesis8(){
@@ -144,7 +146,7 @@ public class StudentAdmissionCalculatorFacadeTests {
         String expression = "GPA[all]>=1.76 & G[BEST[LL,AE]]>=C & G[BEST[AM,GM]]>=C & G[BEST[Hi,Ec,AC,BS]]>=D";
         StudentAdmissionCalculatorFacade studentAdmissionCalculatorFacade = new StudentAdmissionCalculatorFacadeImpl();
         boolean qualified = studentAdmissionCalculatorFacade.isQualified(expression, params);
-        Assert.assertEquals(true, qualified);
+        assertEquals(true, qualified);
     }
 
     @Test
@@ -159,7 +161,7 @@ public class StudentAdmissionCalculatorFacadeTests {
         String expression = "(G[WORST[LL,AM,Ph,AS,Ch,Bi]]>=C)";
         StudentAdmissionCalculatorFacade studentAdmissionCalculatorFacade = new StudentAdmissionCalculatorFacadeImpl();
         boolean qualified = studentAdmissionCalculatorFacade.isQualified(expression, params);
-        Assert.assertEquals(true, qualified);
+        assertEquals(true, qualified);
     }
 
     @Test
@@ -174,7 +176,7 @@ public class StudentAdmissionCalculatorFacadeTests {
         String expression = "(G[WORST[LL,AM,Ph,AS,Ch,Bi]]>=C)";
         StudentAdmissionCalculatorFacade studentAdmissionCalculatorFacade = new StudentAdmissionCalculatorFacadeImpl();
         boolean qualified = studentAdmissionCalculatorFacade.isQualified(expression, params);
-        Assert.assertEquals(false, qualified);
+        assertEquals(false, qualified);
     }
 
     @Test
@@ -198,7 +200,7 @@ public class StudentAdmissionCalculatorFacadeTests {
         String expression = "((COUNT_B[LL,BEST[ICT,Gr,Hi,BS,LS,AC,Ec]]>=3))&(G[GM]>=B)|(G[AM]>=C)&STAT_P[TS]>0";
         StudentAdmissionCalculatorFacade studentAdmissionCalculatorFacade = new StudentAdmissionCalculatorFacadeImpl();
         boolean qualified = studentAdmissionCalculatorFacade.isQualified(expression, params);
-        Assert.assertEquals(false, qualified);
+        assertEquals(false, qualified);
     }
 
     @Test
@@ -222,7 +224,7 @@ public class StudentAdmissionCalculatorFacadeTests {
         String expression = "(((G[LL]>=B)&((COUNT_C[GM,Gr,Ec,BS,LS,Hi]>=4)|(G[AM]>=C))))&STAT_P[TS]>0";
         StudentAdmissionCalculatorFacade studentAdmissionCalculatorFacade = new StudentAdmissionCalculatorFacadeImpl();
         boolean qualified = studentAdmissionCalculatorFacade.isQualified(expression, params);
-        Assert.assertEquals(true, qualified);
+        assertEquals(true, qualified);
     }
 
     @Test
@@ -246,7 +248,7 @@ public class StudentAdmissionCalculatorFacadeTests {
         String expression = "(((G[LL]>=B)&((COUNT_C[GM,Gr,Ec,BS,LS,Hi]>=4)|(G[AM]>=C))))&STAT_P[TS]>0";
         StudentAdmissionCalculatorFacade studentAdmissionCalculatorFacade = new StudentAdmissionCalculatorFacadeImpl();
         boolean qualified = studentAdmissionCalculatorFacade.isQualified(expression, params);
-        Assert.assertEquals(false, qualified);
+        assertEquals(false, qualified);
     }
 
     @Test
@@ -263,7 +265,7 @@ public class StudentAdmissionCalculatorFacadeTests {
         String expression = "((COUNT_B[LL,AE,AM,GM,Ph]>=3))&STAT_P[TS]>50";
         StudentAdmissionCalculatorFacade studentAdmissionCalculatorFacade = new StudentAdmissionCalculatorFacadeImpl();
         boolean qualified = studentAdmissionCalculatorFacade.isQualified(expression, params);
-        Assert.assertEquals(false, qualified);
+        assertEquals(false, qualified);
     }
 
     @Test
@@ -280,7 +282,7 @@ public class StudentAdmissionCalculatorFacadeTests {
         String expression = "((COUNT_B[LL,AE,AM,GM,Ph]>=3))&STAT_P[TS]>50";
         StudentAdmissionCalculatorFacade studentAdmissionCalculatorFacade = new StudentAdmissionCalculatorFacadeImpl();
         boolean qualified = studentAdmissionCalculatorFacade.isQualified(expression, params);
-        Assert.assertEquals(true, qualified);
+        assertEquals(true, qualified);
     }
     @Test
     public void testWithParenthesis15(){
@@ -296,7 +298,7 @@ public class StudentAdmissionCalculatorFacadeTests {
         String expression = "((COUNT_B[LL,AE,AM,GM,Ph]>=3))&STAT_P[TS]>50";
         StudentAdmissionCalculatorFacade studentAdmissionCalculatorFacade = new StudentAdmissionCalculatorFacadeImpl();
         boolean qualified = studentAdmissionCalculatorFacade.isQualified(expression, params);
-        Assert.assertEquals(false, qualified);
+        assertEquals(false, qualified);
     }
 
     @Test
@@ -314,7 +316,7 @@ public class StudentAdmissionCalculatorFacadeTests {
         String expression = "(COUNT_D[LL,AE]=1)&((G[AM]>=D)|(G[GM]>=D))&(G[Bi]>=D)&(COUNT_D[Ch,Ph]>=1)&(STAT_P[TS]>0)";
         StudentAdmissionCalculatorFacade studentAdmissionCalculatorFacade = new StudentAdmissionCalculatorFacadeImpl();
         boolean qualified = studentAdmissionCalculatorFacade.isQualified(expression, params);
-        Assert.assertEquals(false, qualified);
+        assertEquals(false, qualified);
     }
 
     @Test
@@ -332,7 +334,7 @@ public class StudentAdmissionCalculatorFacadeTests {
         String expression = "(COUNT_D[LL,AE]=1)&((G[AM]>=D)|(G[GM]>=D))&(G[Bi]>=D)&(COUNT_D[Ch,Ph]>=1)&(STAT_P[TS]>0)";
         StudentAdmissionCalculatorFacade studentAdmissionCalculatorFacade = new StudentAdmissionCalculatorFacadeImpl();
         boolean qualified = studentAdmissionCalculatorFacade.isQualified(expression, params);
-        Assert.assertEquals(true, qualified);
+        assertEquals(true, qualified);
     }
 
     @Test
@@ -350,7 +352,7 @@ public class StudentAdmissionCalculatorFacadeTests {
         String expression = "(COUNT_D[LL,AE]=1)&((G[AM]>=D)|(G[GM]>=D))&(G[Bi]>=D)&(COUNT_D[Ch,Ph]>=1)&(STAT_P[TS]>0)";
         StudentAdmissionCalculatorFacade studentAdmissionCalculatorFacade = new StudentAdmissionCalculatorFacadeImpl();
         boolean qualified = studentAdmissionCalculatorFacade.isQualified(expression, params);
-        Assert.assertEquals(true, qualified);
+        assertEquals(true, qualified);
     }
 
 
@@ -373,7 +375,7 @@ public class StudentAdmissionCalculatorFacadeTests {
         String expression = "GPA[all]";
         StudentAdmissionCalculatorFacade studentAdmissionCalculatorFacade = new StudentAdmissionCalculatorFacadeImpl();
         float rankigPoints = studentAdmissionCalculatorFacade.calculateRankingPoints(expression, params);
-        Assert.assertEquals(4.0F, rankigPoints, 0.0001f);
+        assertEquals(4.0F, rankigPoints, 0.0001f);
     }
     @Test
     public void testRanking2(){
@@ -385,7 +387,7 @@ public class StudentAdmissionCalculatorFacadeTests {
         String expression = "GPA[all]";
         StudentAdmissionCalculatorFacade studentAdmissionCalculatorFacade = new StudentAdmissionCalculatorFacadeImpl();
         float rankigPoints = studentAdmissionCalculatorFacade.calculateRankingPoints(expression, params);
-        Assert.assertEquals(3.0f, rankigPoints, 0.0001f);
+        assertEquals(3.0f, rankigPoints, 0.0001f);
     }
 
     @Test
@@ -398,7 +400,64 @@ public class StudentAdmissionCalculatorFacadeTests {
         String expression = "W_AVG[4G[LL],1GPA[all]]";
         StudentAdmissionCalculatorFacade studentAdmissionCalculatorFacade = new StudentAdmissionCalculatorFacadeImpl();
         float rankigPoints = studentAdmissionCalculatorFacade.calculateRankingPoints(expression, params);
-        Assert.assertEquals(3.0f, rankigPoints, 0.0001f);
+        assertEquals(3.8f, rankigPoints, 0.0001f);
     }
+    @Test
+    public void testRanking4(){
+        Map<String, String> params = new HashMap<>();
+        params.put("LL","D");
+        params.put("AE","B");
+        params.put("Hi","B");
+
+        String expression = "W_AVG[4G[LL],1GPA[all]]";
+        StudentAdmissionCalculatorFacade studentAdmissionCalculatorFacade = new StudentAdmissionCalculatorFacadeImpl();
+        float rankigPoints = studentAdmissionCalculatorFacade.calculateRankingPoints(expression, params);
+        assertEquals(1.2f, rankigPoints, 0.0001f);
+    }
+    @Test
+    public void testRanking5(){
+        Map<String, String> params = new HashMap<>();
+        params.put("LOCAL_PREF","63");
+
+        String expression = "W_AVG[1LOCAL_PREF[]]";
+        StudentAdmissionCalculatorFacade studentAdmissionCalculatorFacade = new StudentAdmissionCalculatorFacadeImpl();
+        float rankigPoints = studentAdmissionCalculatorFacade.calculateRankingPoints(expression, params);
+        assertEquals(63.0f, rankigPoints, 0.0001f);
+    }
+    @Test
+    public void testRanking6(){
+        Map<String, String> params = new HashMap<>();
+        params.put("LOCAL_PREF","50");
+        params.put("LL","A");
+        params.put("AE","B");
+
+
+        String expression = "W_AVG[10LOCAL_PREF[],1GPA[all]]";
+        StudentAdmissionCalculatorFacade studentAdmissionCalculatorFacade = new StudentAdmissionCalculatorFacadeImpl();
+        float rankigPoints = studentAdmissionCalculatorFacade.calculateRankingPoints(expression, params);
+        assertEquals(45.727272, rankigPoints, 0.0001f);
+    }
+
+    @Test
+    public void testRanking7(){
+        Map<String, String> params = new HashMap<>();
+        params.put("LL","A");
+        params.put("Gr","B");
+        params.put("IT","C");
+        params.put("GM","B");
+        params.put("BS","C");
+        params.put("AC","B");
+        params.put("Ec","A");
+
+
+        String expression = "W_AVG[3G[LL],3G[Gr],2G[IT],3G[GM],2G[BS],2G[AC],1G[Ec]]";
+        StudentAdmissionCalculatorFacade studentAdmissionCalculatorFacade = new StudentAdmissionCalculatorFacadeImpl();
+        float rankigPoints = studentAdmissionCalculatorFacade.calculateRankingPoints(expression, params);
+        assertEquals(3.0f, rankigPoints, 0.0001f);
+    }
+
+
+
+
 
 }

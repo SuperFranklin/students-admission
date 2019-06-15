@@ -13,6 +13,9 @@ public class GPAFunction implements SingleResultFunction {
     public GPAFunction(String expression, Map<String,String> parameters){
         this.expression = expression;
         this.parameters = parameters;
+        if(parameters.containsKey("LOCAL_PREF")){
+            parameters.remove("LOCAL_PREF");
+        }
     }
 
     @Override
@@ -30,7 +33,7 @@ public class GPAFunction implements SingleResultFunction {
         int amount = 0;
         for(String subject : subjects){
             int grade = GradeUtils.toNumber(parameters.get(subject));
-            amount+=grade;
+            amount += grade;
         }
 
         return Float.toString((float) amount / (float) subjects.size());

@@ -11,6 +11,10 @@ public class WorstFunction implements SingleResultFunction {
     public WorstFunction(String expression, Map<String,String> parameters){
         this.expression = expression;
         this.parameters = parameters;
+        this.parameters = parameters;
+        if(parameters.containsKey("LOCAL_PREF")){
+            parameters.remove("LOCAL_PREF");
+        }
     }
 
     @Override
