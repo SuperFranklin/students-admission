@@ -5,16 +5,17 @@ import core.utils.FunctionUtils;
 import core.utils.GradeUtils;
 import org.apache.commons.lang3.StringUtils;
 
+import java.util.HashMap;
 import java.util.Map;
 
 public class GFunction implements SingleResultFunction {
 
     private String expression;
-    Map<String,String> parameters;
+    Map<String,String> parameters = new HashMap<>();
 
     public GFunction(String expression, Map<String,String> parameters){
         this.expression = expression;
-        this.parameters = parameters;
+        this.parameters.putAll(parameters);
     }
 
     @Override

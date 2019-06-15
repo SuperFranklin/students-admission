@@ -5,6 +5,7 @@ import core.utils.FunctionUtils;
 import core.utils.GradeUtils;
 
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -13,11 +14,11 @@ public class CountDFunction implements SingleResultFunction {
     private static final Pattern FUNCTION_PATTERN = Pattern.compile("[A-Z0-9_]*\\[[a-zA-Z,]*\\]");
 
     private String expression;
-    Map<String,String> parameters;
+    Map<String,String> parameters = new HashMap<>();
 
     public CountDFunction(String expression, Map<String,String> parameters){
         this.expression = expression;
-        this.parameters = parameters;
+        this.parameters.putAll(parameters);
     }
 
     @Override

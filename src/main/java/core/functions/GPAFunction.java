@@ -3,18 +3,19 @@ package core.functions;
 import core.utils.GradeUtils;
 
 import java.util.Collection;
+import java.util.HashMap;
 import java.util.Map;
 
 public class GPAFunction implements SingleResultFunction {
 
     private String expression;
-    Map<String,String> parameters;
+    Map<String,String> parameters = new HashMap<>();
 
     public GPAFunction(String expression, Map<String,String> parameters){
         this.expression = expression;
-        this.parameters = parameters;
-        if(parameters.containsKey("LOCAL_PREF")){
-            parameters.remove("LOCAL_PREF");
+        this.parameters.putAll(parameters);
+        if(this.parameters.containsKey("LOCAL_PREF")){
+            this.parameters.remove("LOCAL_PREF");
         }
     }
 

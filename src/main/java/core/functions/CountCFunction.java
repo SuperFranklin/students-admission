@@ -3,16 +3,17 @@ package core.functions;
 import core.utils.GradeUtils;
 
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.Map;
 
 public class CountCFunction implements SingleResultFunction {
 
     private String expression;
-    Map<String,String> parameters;
+    Map<String,String> parameters = new HashMap<>();
 
     public CountCFunction(String expression, Map<String,String> parameters){
         this.expression = expression;
-        this.parameters = parameters;
+        this.parameters.putAll(parameters);
     }
 
     @Override

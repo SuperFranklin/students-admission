@@ -2,16 +2,17 @@ package core.functions;
 
 import core.utils.GradeUtils;
 
+import java.util.HashMap;
 import java.util.Map;
 
 public class BestFunction implements SingleResultFunction {
 
     private String expression;
-    Map<String,String> parameters;
+    Map<String,String> parameters = new HashMap<>();
 
     public BestFunction(String expression, Map<String,String> parameters){
         this.expression = expression;
-        this.parameters = parameters;
+        this.parameters.putAll(parameters);
     }
 
     @Override

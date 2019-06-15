@@ -13,11 +13,11 @@ public class WAVGFunction implements SingleResultFunction {
     private static final Pattern NUMBER_AT_THE_BEGINNING = Pattern.compile("(?m)^(\\d+)");
 
     private String expression;
-    Map<String,String> parameters;
+    Map<String,String> parameters = new HashMap<>();
 
     public WAVGFunction(String expression, Map<String,String> parameters){
         this.expression = expression;
-        this.parameters = parameters;
+        this.parameters.putAll(parameters);
     }
 
     @Override

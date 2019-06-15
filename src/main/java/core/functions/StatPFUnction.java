@@ -2,14 +2,15 @@ package core.functions;
 
 import core.utils.GradeUtils;
 
+import java.util.HashMap;
 import java.util.Map;
 
 public class StatPFUnction implements SingleResultFunction {
 
-    Map<String,String> parameters;
+    Map<String,String> parameters = new HashMap<>();
 
     public StatPFUnction(Map<String,String> parameters){
-        this.parameters = parameters;
+        this.parameters.putAll(parameters);
     }
 
     @Override

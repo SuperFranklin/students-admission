@@ -2,18 +2,18 @@ package core.functions;
 
 import core.utils.GradeUtils;
 
+import java.util.HashMap;
 import java.util.Map;
 
 public class WorstFunction implements SingleResultFunction {
     private String expression;
-    Map<String,String> parameters;
+    Map<String,String> parameters = new HashMap<>();
 
     public WorstFunction(String expression, Map<String,String> parameters){
         this.expression = expression;
-        this.parameters = parameters;
-        this.parameters = parameters;
-        if(parameters.containsKey("LOCAL_PREF")){
-            parameters.remove("LOCAL_PREF");
+        this.parameters.putAll(parameters);
+        if(this.parameters.containsKey("LOCAL_PREF")){
+            this.parameters.remove("LOCAL_PREF");
         }
     }
 
