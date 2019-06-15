@@ -9,7 +9,7 @@ import java.util.Optional;
 public enum Operator {
     AND("&",2), OR("|",2), GREATER(">",1),
     LESS("<",1),GREATER_EQUAL(">=",1),
-    LESS_EQUAL("<=",1);
+    LESS_EQUAL("<=",1),EQUAL("=",1);
 
     private final String expression;
     private final int precedence;

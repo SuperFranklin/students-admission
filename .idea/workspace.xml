@@ -2,19 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="69fdcd23-9ebb-421a-b5f7-7c61ad1a86e7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/core/functions/CountBFunction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/core/functions/CountDFunction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/core/utils/FunctionUtils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/core/converters/PostfixExpressionConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/core/converters/PostfixExpressionConverter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/core/functions/CountCFunction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/core/functions/CountCFunction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/core/functions/FunctionFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/core/functions/FunctionFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/core/functions/GFunction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/core/functions/GFunction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/core/calculators/OperatorCalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/core/calculators/OperatorCalculator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/core/utils/Operator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/core/utils/Operator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/StudentAdmissionCalculatorFacadeTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/StudentAdmissionCalculatorFacadeTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/core/converters/PostfixExpressionConverter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/core/converters/PostfixExpressionConverter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/core/functions/CountCFunction.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/core/functions/CountCFunction.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/core/functions/FunctionFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/core/functions/FunctionFactory.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/core/functions/GFunction.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/core/functions/GFunction.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/core/calculators/OperatorCalculator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/core/calculators/OperatorCalculator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/core/utils/Operator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/core/utils/Operator.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/StudentAdmissionCalculatorFacadeTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/StudentAdmissionCalculatorFacadeTests.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -96,7 +89,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.StudentAdmissionCalculatorFacadeTests.testWithParenthesis16">
+  <component name="RunManager" selected="JUnit.StudentAdmissionCalculatorFacadeTests">
     <configuration name="Unnamed" type="Application" factoryName="Application" nameIsGenerated="true">
       <module name="ExpressionsLIbrary" />
       <method v="2">
@@ -209,8 +202,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.StudentAdmissionCalculatorFacadeTests.testWithParenthesis16" />
         <item itemvalue="JUnit.StudentAdmissionCalculatorFacadeTests" />
+        <item itemvalue="JUnit.StudentAdmissionCalculatorFacadeTests.testWithParenthesis16" />
         <item itemvalue="JUnit.StudentAdmissionCalculatorFacadeTests.testWithParenthesis14" />
         <item itemvalue="JUnit.StudentAdmissionCalculatorFacadeTests.testWithParenthesis13" />
         <item itemvalue="JUnit.StudentAdmissionCalculatorFacadeTests.testWithParenthesis11" />
@@ -239,7 +232,7 @@
       <workItem from="1560528040389" duration="81000" />
       <workItem from="1560528294963" duration="4516000" />
       <workItem from="1560547740825" duration="322000" />
-      <workItem from="1560578731891" duration="8749000" />
+      <workItem from="1560578731891" duration="9773000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1560471616169</created>
@@ -262,7 +255,14 @@
       <option name="project" value="LOCAL" />
       <updated>1560579110490</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="another tests and fixes">
+      <created>1560590051574</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1560590051574</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -284,7 +284,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="initial commit" />
     <MESSAGE value="Shunting yard fixes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Shunting yard fixes" />
+    <MESSAGE value="another tests and fixes" />
+    <option name="LAST_COMMIT_MESSAGE" value="another tests and fixes" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -304,8 +305,8 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/core/calculators/PostfixCalculator.java</url>
-          <line>19</line>
-          <option name="timeStamp" value="127" />
+          <line>18</line>
+          <option name="timeStamp" value="131" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

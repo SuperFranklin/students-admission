@@ -311,7 +311,6 @@ public class StudentAdmissionCalculatorFacadeTests {
         params.put("Ch","B");
         params.put("Bi","C");
 
-
         String expression = "(COUNT_D[LL,AE]=1)&((G[AM]>=D)|(G[GM]>=D))&(G[Bi]>=D)&(COUNT_D[Ch,Ph]>=1)&(STAT_P[TS]>0)";
         StudentAdmissionCalculatorFacade studentAdmissionCalculatorFacade = new StudentAdmissionCalculatorFacadeImpl();
         boolean qualified = studentAdmissionCalculatorFacade.isQualified(expression, params);

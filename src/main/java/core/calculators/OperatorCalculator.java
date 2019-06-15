@@ -72,6 +72,16 @@ public class OperatorCalculator {
                 return 0.0f;
             }
         }
+        if(Operator.EQUAL.getExpression().equals(operatorExpression)){
+            float first = firstElement.getValue();
+            float second = secondElement.getValue();
+
+            if(first == second){
+                return 1.0f;
+            }else{
+                return 0.0f;
+            }
+        }
 
         throw new IllegalArgumentException("Illegall operator");
     }
