@@ -42,7 +42,17 @@ public class StudentAdmissionCalculatorFacadeImpl implements StudentAdmissionCal
      */
     @Override
     public float calculateRankingPoints(String expression, Map<String, String> parameters) {
-        //TODO add implementation
-        return 0;
+        ExpressionParser expressionParser = new ExpressionParser();
+        //parse expression to components with childs
+        List<Component> parse = expressionParser.parse(expression);
+        //convert all components to infix notation - flattering the structure
+        List<ShuntingYardElement> infixNotationComponents = InfixExpressionConverter.convert(parse);
+        //convert components to postfix notation
+        List<ShuntingYardElement> postfix = PostfixExpressionConverter.postfix(infixNotationComponents);
+        //calculate value for non sign components
+        List<ShuntingYardElement> calculated = ComponentCalculator.calculate(postfix, parameters);
+        //calculate result as float
+        float rankingPoints = PostfixCalculator.calculate(calculated);
+        return rankingPoints;
     }
 }

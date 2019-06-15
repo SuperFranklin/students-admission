@@ -317,6 +317,43 @@ public class StudentAdmissionCalculatorFacadeTests {
         Assert.assertEquals(false, qualified);
     }
 
+    @Test
+    public void testWithParenthesis17(){
+        Map<String, String> params = new HashMap<>();
+        params.put("LL","E");
+        params.put("AE","D");
+        params.put("AM","B");
+        params.put("GM","D");
+        params.put("Ph","A");
+        params.put("TS","50");
+        params.put("Ch","B");
+        params.put("Bi","C");
+
+        String expression = "(COUNT_D[LL,AE]=1)&((G[AM]>=D)|(G[GM]>=D))&(G[Bi]>=D)&(COUNT_D[Ch,Ph]>=1)&(STAT_P[TS]>0)";
+        StudentAdmissionCalculatorFacade studentAdmissionCalculatorFacade = new StudentAdmissionCalculatorFacadeImpl();
+        boolean qualified = studentAdmissionCalculatorFacade.isQualified(expression, params);
+        Assert.assertEquals(true, qualified);
+    }
+
+    @Test
+    public void testWithParenthesis18(){
+        Map<String, String> params = new HashMap<>();
+        params.put("LL","E");
+        params.put("AE","D");
+        params.put("AM","B");
+        params.put("GM","D");
+        params.put("Ph","A");
+        params.put("TS","50");
+        params.put("Ch","B");
+        params.put("Bi","C");
+
+        String expression = "(COUNT_D[LL,AE]=1)&((G[AM]>=D)|(G[GM]>=D))&(G[Bi]>=D)&(COUNT_D[Ch,Ph]>=1)&(STAT_P[TS]>0)";
+        StudentAdmissionCalculatorFacade studentAdmissionCalculatorFacade = new StudentAdmissionCalculatorFacadeImpl();
+        boolean qualified = studentAdmissionCalculatorFacade.isQualified(expression, params);
+        Assert.assertEquals(true, qualified);
+    }
+
+
 
 
 
@@ -325,4 +362,29 @@ public class StudentAdmissionCalculatorFacadeTests {
 
     /////////////////////////////////////////////////////////////////////////////////////////////
     //*************************TEST RANKINGU******************************************************
+
+
+    @Test
+    public void testRanking1(){
+        Map<String, String> params = new HashMap<>();
+        params.put("LL","A");
+        params.put("AE","A");
+
+        String expression = "GPA[all]";
+        StudentAdmissionCalculatorFacade studentAdmissionCalculatorFacade = new StudentAdmissionCalculatorFacadeImpl();
+        float rankigPoints = studentAdmissionCalculatorFacade.calculateRankingPoints(expression, params);
+        Assert.assertEquals(4.0F, rankigPoints, 0.0001f);
+    }
+    @Test
+    public void testRanking2(){
+        Map<String, String> params = new HashMap<>();
+        params.put("LL","A");
+        params.put("AE","B");
+        params.put("Hi","C");
+
+        String expression = "GPA[all]";
+        StudentAdmissionCalculatorFacade studentAdmissionCalculatorFacade = new StudentAdmissionCalculatorFacadeImpl();
+        float rankigPoints = studentAdmissionCalculatorFacade.calculateRankingPoints(expression, params);
+        Assert.assertEquals(3.0f, rankigPoints, 0.0001f);
+    }
 }
