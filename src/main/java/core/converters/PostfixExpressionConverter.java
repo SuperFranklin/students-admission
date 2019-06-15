@@ -23,6 +23,9 @@ public class PostfixExpressionConverter {
         for (ShuntingYardElement token : components) {
             // operator and higher precedence
             if (isOperator(token)) {
+                while(!stack.isEmpty() && isHigherPrecedence(Operator.fromExpression(token.getExpression()), Operator.fromExpression(stack.peek().getExpression())) ){
+                    output.add(stack.pop());
+                }
                 stack.push(token);
 
                 // left parenthesis

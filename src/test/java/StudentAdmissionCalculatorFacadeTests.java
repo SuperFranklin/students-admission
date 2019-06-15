@@ -127,7 +127,7 @@ public class StudentAdmissionCalculatorFacadeTests {
         String expression = "G[WORST[all]]>=C";
         StudentAdmissionCalculatorFacade studentAdmissionCalculatorFacade = new StudentAdmissionCalculatorFacadeImpl();
         boolean qualified = studentAdmissionCalculatorFacade.isQualified(expression, params);
-        Assert.assertEquals(false, qualified);
+        Assert.assertEquals(true, qualified);
     }
     @Test
     public void testWithoutParenthesis8(){
