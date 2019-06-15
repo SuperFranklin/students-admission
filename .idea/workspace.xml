@@ -2,10 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="69fdcd23-9ebb-421a-b5f7-7c61ad1a86e7" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/core/functions/WAVGFunction.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/core/facade/StudentAdmissionCalculatorFacadeImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/core/facade/StudentAdmissionCalculatorFacadeImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/core/functions/FunctionFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/core/functions/FunctionFactory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/StudentAdmissionCalculatorFacadeTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/StudentAdmissionCalculatorFacadeTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/core/facade/StudentAdmissionCalculatorFacadeImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/core/facade/StudentAdmissionCalculatorFacadeImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/core/functions/FunctionFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/core/functions/FunctionFactory.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/StudentAdmissionCalculatorFacadeTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/StudentAdmissionCalculatorFacadeTests.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -87,7 +88,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.StudentAdmissionCalculatorFacadeTests">
+  <component name="RunManager" selected="JUnit.StudentAdmissionCalculatorFacadeTests.testRanking3">
     <configuration name="Unnamed" type="Application" factoryName="Application" nameIsGenerated="true">
       <module name="ExpressionsLIbrary" />
       <method v="2">
@@ -123,11 +124,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="StudentAdmissionCalculatorFacadeTests.testWithParenthesis16" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="StudentAdmissionCalculatorFacadeTests.testRanking3" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="expressions-library" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="StudentAdmissionCalculatorFacadeTests" />
-      <option name="METHOD_NAME" value="testWithParenthesis16" />
+      <option name="METHOD_NAME" value="testRanking3" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -193,18 +194,18 @@
     <list>
       <item itemvalue="Application.Unnamed" />
       <item itemvalue="JUnit.StudentAdmissionCalculatorFacadeTests" />
-      <item itemvalue="JUnit.StudentAdmissionCalculatorFacadeTests.testWithParenthesis16" />
       <item itemvalue="JUnit.StudentAdmissionCalculatorFacadeTests.testWithParenthesis17" />
       <item itemvalue="JUnit.StudentAdmissionCalculatorFacadeTests.testRanking1" />
       <item itemvalue="JUnit.StudentAdmissionCalculatorFacadeTests.testRanking2" />
+      <item itemvalue="JUnit.StudentAdmissionCalculatorFacadeTests.testRanking3" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.StudentAdmissionCalculatorFacadeTests.testRanking3" />
         <item itemvalue="JUnit.StudentAdmissionCalculatorFacadeTests" />
         <item itemvalue="JUnit.StudentAdmissionCalculatorFacadeTests.testRanking2" />
         <item itemvalue="JUnit.StudentAdmissionCalculatorFacadeTests.testRanking1" />
         <item itemvalue="JUnit.StudentAdmissionCalculatorFacadeTests.testWithParenthesis17" />
-        <item itemvalue="JUnit.StudentAdmissionCalculatorFacadeTests.testWithParenthesis16" />
       </list>
     </recent_temporary>
   </component>
@@ -230,7 +231,7 @@
       <workItem from="1560528040389" duration="81000" />
       <workItem from="1560528294963" duration="4516000" />
       <workItem from="1560547740825" duration="322000" />
-      <workItem from="1560578731891" duration="10502000" />
+      <workItem from="1560578731891" duration="14033000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1560471616169</created>
@@ -267,7 +268,14 @@
       <option name="project" value="LOCAL" />
       <updated>1560591076454</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="ranking calculation implementation and tests">
+      <created>1560591818218</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1560591818218</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -291,43 +299,21 @@
     <MESSAGE value="Shunting yard fixes" />
     <MESSAGE value="another tests and fixes" />
     <MESSAGE value="added equal operator" />
-    <option name="LAST_COMMIT_MESSAGE" value="added equal operator" />
+    <MESSAGE value="ranking calculation implementation and tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="ranking calculation implementation and tests" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <breakpoint enabled="true" type="java-exception">
-          <properties class="java.lang.NullPointerException" package="java.lang" />
-          <option name="timeStamp" value="109" />
-        </breakpoint>
-        <breakpoint enabled="true" type="java-exception">
-          <properties class="java.lang.NumberFormatException" package="java.lang" />
-          <option name="timeStamp" value="111" />
-        </breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/core/functions/CountBFunction.java</url>
-          <line>44</line>
-          <option name="timeStamp" value="126" />
+          <url>file://$PROJECT_DIR$/src/main/java/core/functions/WAVGFunction.java</url>
+          <line>27</line>
+          <option name="timeStamp" value="140" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/core/calculators/PostfixCalculator.java</url>
-          <line>18</line>
-          <option name="timeStamp" value="131" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/core/functions/CountDFunction.java</url>
-          <line>43</line>
-          <option name="timeStamp" value="132" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/core/facade/StudentAdmissionCalculatorFacadeImpl.java</url>
-          <line>55</line>
-          <option name="timeStamp" value="133" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/StudentAdmissionCalculatorFacadeTests.java</url>
-          <line>375</line>
-          <option name="timeStamp" value="134" />
+          <url>file://$PROJECT_DIR$/src/main/java/core/functions/GPAFunction.java</url>
+          <line>20</line>
+          <option name="timeStamp" value="141" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

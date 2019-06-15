@@ -387,4 +387,18 @@ public class StudentAdmissionCalculatorFacadeTests {
         float rankigPoints = studentAdmissionCalculatorFacade.calculateRankingPoints(expression, params);
         Assert.assertEquals(3.0f, rankigPoints, 0.0001f);
     }
+
+    @Test
+    public void testRanking3(){
+        Map<String, String> params = new HashMap<>();
+        params.put("LL","A");
+        params.put("AE","B");
+        params.put("Hi","C");
+
+        String expression = "W_AVG[4G[LL],1GPA[all]]";
+        StudentAdmissionCalculatorFacade studentAdmissionCalculatorFacade = new StudentAdmissionCalculatorFacadeImpl();
+        float rankigPoints = studentAdmissionCalculatorFacade.calculateRankingPoints(expression, params);
+        Assert.assertEquals(3.0f, rankigPoints, 0.0001f);
+    }
+
 }

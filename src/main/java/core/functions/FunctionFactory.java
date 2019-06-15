@@ -30,6 +30,9 @@ public class FunctionFactory {
         if(functionExp.equals("WORST")){
             return new WorstFunction(expression,parameters);
         }
+        if(functionExp.equals("W_AVG")){
+            return new WAVGFunction(expression,parameters);
+        }
 
         return null;
     }
