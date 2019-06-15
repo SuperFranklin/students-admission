@@ -21,6 +21,12 @@ public class FunctionFactory {
         if(functionExp.equals("COUNT_C")){
             return new CountCFunction(expression,parameters);
         }
+        if(functionExp.equals("COUNT_B")){
+            return new CountBFunction(expression,parameters);
+        }
+        if(functionExp.equals("COUNT_D")){
+            return new CountDFunction(expression,parameters);
+        }
         if(functionExp.equals("WORST")){
             return new WorstFunction(expression,parameters);
         }

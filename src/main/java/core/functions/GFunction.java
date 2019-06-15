@@ -1,6 +1,7 @@
 package core.functions;
 
 import core.utils.CharUtils;
+import core.utils.FunctionUtils;
 import core.utils.GradeUtils;
 import org.apache.commons.lang3.StringUtils;
 
@@ -18,7 +19,7 @@ public class GFunction implements SingleResultFunction {
 
     @Override
     public String calculate() {
-        int numberOfFunctions = numOfFunctions();
+        int numberOfFunctions = FunctionUtils.numOfFunctions(expression);
         if(numberOfFunctions==1) {
             String argument = parseFunctionArgument();
             int grade = getGrade(argument);
@@ -44,9 +45,6 @@ public class GFunction implements SingleResultFunction {
         return grade;
     }
 
-    private int numOfFunctions() {
-        return StringUtils.countMatches(expression, "[");
-    }
 
     private String parseFunctionArgument() {
         String argument = expression.replaceAll("G\\[", "");

@@ -22,7 +22,7 @@ public class CountCFunction implements SingleResultFunction {
         long count = Arrays.stream(subjects)
                 .map(subject -> parameters.get(subject))
                 .map(GradeUtils::toNumber)
-                .filter(grade -> grade >= 1)
+                .filter(grade -> grade >= 2)
                 .count();
 
         return Long.toString(count);
