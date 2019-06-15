@@ -2,30 +2,29 @@ package core.functions;
 
 import core.utils.GradeUtils;
 
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
+import java.util.stream.Collectors;
 
-public class BestFunction implements Function {
-
+public class Best2Function implements Function {
     private String expression;
     Map<String,String> parameters = new HashMap<>();
 
-    public BestFunction(String expression, Map<String,String> parameters){
+    public Best2Function(String expression, Map<String,String> parameters){
         this.expression = expression;
         this.parameters.putAll(parameters);
     }
 
     @Override
     public String calculate() {
+
         String methodParameters = expression.split("\\[")[1];
         String[] split = methodParameters.split(",");
-        Integer best = Arrays.stream(split).
+        List<Integer> descGrades = Arrays.stream(split).
                 map(parameters::get).
                 map(GradeUtils::toNumber).
-                max(Integer::compareTo).
-                get();
-        return Integer.toString(best);
+                sorted(Integer::compareTo).
+                collect(Collectors.toList());
+        int length = descGrades.size();
+        return descGrades.get(length - 1) + "," + descGrades.get(length -2);
     }
 }

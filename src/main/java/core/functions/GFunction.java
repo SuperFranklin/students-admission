@@ -3,12 +3,12 @@ package core.functions;
 import core.utils.CharUtils;
 import core.utils.FunctionUtils;
 import core.utils.GradeUtils;
-import org.apache.commons.lang3.StringUtils;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.regex.Pattern;
 
-public class GFunction implements SingleResultFunction {
+public class GFunction implements Function {
 
     private String expression;
     Map<String,String> parameters = new HashMap<>();
@@ -28,9 +28,9 @@ public class GFunction implements SingleResultFunction {
             return String.valueOf(grade);
         }
         String insideFunctionExp = expression.substring(2, expression.length()).split("]")[0];
-        SingleResultFunction singleResultFunction = FunctionFactory.getFunction(insideFunctionExp, parameters);
+        Function function = FunctionFactory.getFunction(insideFunctionExp, parameters);
 
-        return singleResultFunction.calculate();
+        return function.calculate();
     }
 
     private int getGrade(String argument) {

@@ -1,5 +1,5 @@
 package core.functions;
 
-public interface SingleResultFunction {
+public interface Function {
     String calculate();
 }

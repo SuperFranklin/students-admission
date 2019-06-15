@@ -10,7 +10,7 @@ import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class CountDFunction implements SingleResultFunction {
+public class CountDFunction implements Function {
     private static final Pattern FUNCTION_PATTERN = Pattern.compile("[A-Z0-9_]*\\[[a-zA-Z,]*\\]");
 
     private String expression;
@@ -30,7 +30,7 @@ public class CountDFunction implements SingleResultFunction {
             int start = matcher.start();
             int end = matcher.end();
             String insideFunction = expression.substring(start,end-1);
-            SingleResultFunction function = FunctionFactory.getFunction(insideFunction, parameters);
+            Function function = FunctionFactory.getFunction(insideFunction, parameters);
             String result = function.calculate();
             expression = expression.replaceAll(FUNCTION_PATTERN.pattern(), result);
         }

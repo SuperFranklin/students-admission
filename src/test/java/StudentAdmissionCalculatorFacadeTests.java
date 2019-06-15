@@ -355,6 +355,58 @@ public class StudentAdmissionCalculatorFacadeTests {
         assertEquals(true, qualified);
     }
 
+    @Test
+    public void testWithParenthesisAndBestTrue(){
+        Map<String, String> params = new HashMap<>();
+        params.put("LL","E");
+        params.put("AE","A");
+        params.put("AM","B");
+        params.put("GM","B");
+        params.put("Ph","A");
+        params.put("TS","50");
+        params.put("Ch","E");
+        params.put("Bi","C");
+        params.put("Ec","B");
+        params.put("Ge","A");
+        params.put("Hi","E");
+        params.put("Geo","C");
+        params.put("Acc","B");
+        params.put("BS","D");
+        params.put("LS","E");
+        params.put("ICT","3");
+
+        String expression = "(((G[LL]>=B)|(G[AE]>B)&((G[GM]>=C)|(G[AM]>=B)))&(GPA[BEST_2[Ec,Ge,Hi,Ph,Ch,Bi,Geo,Acc,BS,LS,ICT]]>=2.5))";
+        StudentAdmissionCalculatorFacade studentAdmissionCalculatorFacade = new StudentAdmissionCalculatorFacadeImpl();
+        boolean qualified = studentAdmissionCalculatorFacade.isQualified(expression, params);
+        assertEquals(true, qualified);
+    }
+
+    @Test
+    public void testWithParenthesisAndBestFalse(){
+        Map<String, String> params = new HashMap<>();
+        params.put("LL","E");
+        params.put("AE","C");
+        params.put("AM","B");
+        params.put("GM","B");
+        params.put("Ph","A");
+        params.put("TS","50");
+        params.put("Ch","E");
+        params.put("Bi","C");
+        params.put("Ec","B");
+        params.put("Ge","A");
+        params.put("Hi","E");
+        params.put("Geo","C");
+        params.put("Acc","B");
+        params.put("BS","D");
+        params.put("LS","E");
+        params.put("ICT","3");
+
+        String expression = "(((G[LL]>=B)|(G[AE]>B)&((G[GM]>=C)|(G[AM]>=B)))&(GPA[BEST_2[Ec,Ge,Hi,Ph,Ch,Bi,Geo,Acc,BS,LS,ICT]]>=2.5))";
+        StudentAdmissionCalculatorFacade studentAdmissionCalculatorFacade = new StudentAdmissionCalculatorFacadeImpl();
+        boolean qualified = studentAdmissionCalculatorFacade.isQualified(expression, params);
+        assertEquals(false, qualified);
+    }
+
 
 
 

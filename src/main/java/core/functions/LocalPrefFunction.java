@@ -1,13 +1,9 @@
 package core.functions;
 
-import core.utils.CharUtils;
-import core.utils.FunctionUtils;
-import core.utils.GradeUtils;
-
 import java.util.HashMap;
 import java.util.Map;
 
-public class LocalPrefFunction implements SingleResultFunction {
+public class LocalPrefFunction implements Function {
 
     Map<String,String> parameters = new HashMap<>();
 

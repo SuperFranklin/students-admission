@@ -31,7 +31,7 @@ public class OperatorCalculator {
             }
         }
         if(Operator.GREATER.getExpression().equals(operatorExpression)){
-            float first = firstElement.getValue();
+            float first = getValue(firstElement);
             float second = secondElement.getValue();
 
             if(first > second){
@@ -84,5 +84,9 @@ public class OperatorCalculator {
         }
 
         throw new IllegalArgumentException("Illegall operator");
+    }
+
+    private static Float getValue(ShuntingYardElement firstElement) {
+        return firstElement.getValue();
     }
 }

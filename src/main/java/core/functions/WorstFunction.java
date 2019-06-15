@@ -5,7 +5,7 @@ import core.utils.GradeUtils;
 import java.util.HashMap;
 import java.util.Map;
 
-public class WorstFunction implements SingleResultFunction {
+public class WorstFunction implements Function {
     private String expression;
     Map<String,String> parameters = new HashMap<>();
 

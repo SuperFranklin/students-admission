@@ -3,7 +3,7 @@ package core.functions;
 import java.util.Map;
 
 public class FunctionFactory {
-    public static SingleResultFunction getFunction(String expression, Map<String,String> parameters){
+    public static Function getFunction(String expression, Map<String,String> parameters){
         String functionExp = getFunctionExpression(expression);
 
         if(functionExp.equals("GPA")){
@@ -11,6 +11,9 @@ public class FunctionFactory {
         }
         if(functionExp.equals("BEST")){
             return new BestFunction(expression,parameters);
+        }
+        if(functionExp.equals("BEST_2")){
+            return new Best2Function(expression,parameters);
         }
         if(functionExp.equals("G")){
             return new GFunction(expression,parameters);

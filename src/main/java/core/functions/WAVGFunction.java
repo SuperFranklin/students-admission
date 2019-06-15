@@ -1,14 +1,12 @@
 package core.functions;
 
 import org.apache.commons.lang3.tuple.Pair;
-import org.jetbrains.annotations.NotNull;
 
 import java.util.*;
-import java.util.Map.Entry;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class WAVGFunction implements SingleResultFunction {
+public class WAVGFunction implements Function {
     
     private static final Pattern NUMBER_AT_THE_BEGINNING = Pattern.compile("(?m)^(\\d+)");
 
@@ -42,7 +40,7 @@ public class WAVGFunction implements SingleResultFunction {
     }
 
     private Float getGrade(String functionExpression) {
-        SingleResultFunction function = FunctionFactory.getFunction(functionExpression, parameters);
+        Function function = FunctionFactory.getFunction(functionExpression, parameters);
         return Float.valueOf(function.calculate());
     }
 

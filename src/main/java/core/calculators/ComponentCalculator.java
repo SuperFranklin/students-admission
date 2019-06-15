@@ -1,6 +1,6 @@
 package core.calculators;
 
-import core.functions.SingleResultFunction;
+import core.functions.Function;
 import core.functions.FunctionFactory;
 import core.model.ShuntingYardElement;
 import core.utils.CharUtils;
@@ -23,10 +23,13 @@ public class ComponentCalculator {
     }
 
     private static void calculatePureFunction(Map<String, String> parameters, ShuntingYardElement component, String expression) {
-        SingleResultFunction singleResultFunction = FunctionFactory.getFunction(expression, parameters);
-        if (singleResultFunction != null) {
-            String calculate = singleResultFunction.calculate();
-            component.setValue(calculate);
+        Function function = FunctionFactory.getFunction(expression, parameters);
+        if (function != null) {
+            String calculate = function.calculate();
+            //if more than one result
+            if(!calculate.contains(",")) {
+                component.setValue(calculate);
+            }
         }
 
         if(CharUtils.isNumber(expression)){

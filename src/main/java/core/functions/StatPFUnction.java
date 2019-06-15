@@ -5,7 +5,7 @@ import core.utils.GradeUtils;
 import java.util.HashMap;
 import java.util.Map;
 
-public class StatPFUnction implements SingleResultFunction {
+public class StatPFUnction implements Function {
 
     Map<String,String> parameters = new HashMap<>();
 
