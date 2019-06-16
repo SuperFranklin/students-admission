@@ -1,10 +1,8 @@
 package core.calculators;
 
-import com.sun.istack.internal.NotNull;
 import core.model.BasicComponent;
 import core.model.ShuntingYardElement;
-import core.utils.CharUtils;
-import core.utils.Operator;
+import core.utils.TextUtils;
 
 import java.util.Deque;
 import java.util.LinkedList;
@@ -12,10 +10,14 @@ import java.util.List;
 
 public class PostfixCalculator {
 
-    public static float calculate(@NotNull List<ShuntingYardElement> elements){
+    /**
+     * @param elements in postfix notation
+     * @return shunting yard elements with calculated values
+     */
+    public static float calculate(List<ShuntingYardElement> elements){
         Deque<ShuntingYardElement> stack = new LinkedList<>();
         for(ShuntingYardElement element : elements) {
-            if (CharUtils.isSign(element)) {
+            if (TextUtils.isSign(element)) {
                 ShuntingYardElement second = stack.pop();
                 ShuntingYardElement first = stack.pop();
                 float result = OperatorCalculator.calculate(first, second, element);

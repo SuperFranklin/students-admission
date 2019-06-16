@@ -1,7 +1,7 @@
 package core.calculators;
 
 import core.model.ShuntingYardElement;
-import core.utils.CharUtils;
+import core.utils.TextUtils;
 import core.utils.Operator;
 
 public class OperatorCalculator {
@@ -9,11 +9,17 @@ public class OperatorCalculator {
     private static final float TRUE = 1.0f;
     private static final float FALSE = 0.0f;
 
+    /**
+     * @param firstElement
+     * @param secondElement
+     * @param operator
+     * @return result of (first element) operator (second element) calculation
+     */
     public static float calculate(ShuntingYardElement firstElement, ShuntingYardElement secondElement, ShuntingYardElement operator){
         String operatorExpression = operator.getExpression();
         if(Operator.AND.getExpression().equals(operatorExpression)){
-            boolean first = CharUtils.toBolean(firstElement.getValue());
-            boolean second = CharUtils.toBolean(secondElement.getValue());
+            boolean first = TextUtils.toBolean(firstElement.getValue());
+            boolean second = TextUtils.toBolean(secondElement.getValue());
             if(first && second){
                 return TRUE;
             }else{
@@ -64,8 +70,8 @@ public class OperatorCalculator {
 
         }
         if(Operator.OR.getExpression().equals(operatorExpression)){
-            boolean first = CharUtils.toBolean(firstElement.getValue());
-            boolean second = CharUtils.toBolean(secondElement.getValue());
+            boolean first = TextUtils.toBolean(firstElement.getValue());
+            boolean second = TextUtils.toBolean(secondElement.getValue());
 
             if(first || second){
                 return 1.0f;

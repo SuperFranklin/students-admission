@@ -1,6 +1,6 @@
 package core.functions;
 
-import core.utils.CharUtils;
+import core.utils.TextUtils;
 import core.utils.FunctionUtils;
 import core.utils.GradeUtils;
 
@@ -56,7 +56,7 @@ public class CountAFunction implements Function {
     }
 
     private String grade(String arg){
-        if(CharUtils.isGrade(arg)){
+        if(TextUtils.isGrade(arg)){
             return arg;
         }
         return parameters.get(arg);

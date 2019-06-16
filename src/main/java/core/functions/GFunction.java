@@ -1,12 +1,11 @@
 package core.functions;
 
-import core.utils.CharUtils;
+import core.utils.TextUtils;
 import core.utils.FunctionUtils;
 import core.utils.GradeUtils;
 
 import java.util.HashMap;
 import java.util.Map;
-import java.util.regex.Pattern;
 
 public class GFunction implements Function {
 
@@ -42,7 +41,7 @@ public class GFunction implements Function {
     }
 
     private int getGrade(String argument) {
-        boolean isGrade = CharUtils.isGrade(argument);
+        boolean isGrade = TextUtils.isGrade(argument);
         int grade = 0;
         if(isGrade){
             //argumentem funkcji jest ocena

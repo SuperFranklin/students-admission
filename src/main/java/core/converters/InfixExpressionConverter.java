@@ -9,10 +9,14 @@ import java.util.List;
 
 public class InfixExpressionConverter {
 
-    public static List<ShuntingYardElement> convert(List<Component> input){
+    /**
+     * @param components
+     * @return list of Shunting yard flatted elements in infix notation. Elements doesn't have childs!
+     */
+    public static List<ShuntingYardElement> convert(List<Component> components){
         List<ShuntingYardElement> result = new ArrayList<>();
 
-        for(Component component : input){
+        for(Component component : components){
             result.addAll(allChilds(component));
         }
 

@@ -1,6 +1,6 @@
 package core.model;
 
-import core.utils.CharUtils;
+import core.utils.TextUtils;
 
 public class BasicComponent implements ShuntingYardElement {
     private String expression;
@@ -21,7 +21,7 @@ public class BasicComponent implements ShuntingYardElement {
 
     public boolean isSign(){
         for(char c : expression.toCharArray()){
-            if(!CharUtils.isOperational(c)){
+            if(!TextUtils.isOperational(c)){
                 return false;
             }
         }

@@ -1,7 +1,7 @@
 package core.functions;
 
 import core.parsers.SubjectParser;
-import core.utils.CharUtils;
+import core.utils.TextUtils;
 import core.utils.FunctionUtils;
 import core.utils.GradeUtils;
 
@@ -60,7 +60,7 @@ public class GPAFunction implements Function {
     private String gpa(Collection<String> arguments){
         int amount = 0;
         for(String argument : arguments){
-            if(CharUtils.isNumber(argument)){
+            if(TextUtils.isNumber(argument)){
                 amount += Integer.valueOf(argument);
             }
             if(parameters.containsKey(argument)) {

@@ -5,7 +5,7 @@ import core.model.ShuntingYardElement;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class CharUtils {
+public class TextUtils {
 
     private static final Pattern NUMBER_PATTERN = Pattern.compile("^[0-9.]*$");
 
@@ -40,7 +40,7 @@ public class CharUtils {
     public static boolean isSign(ShuntingYardElement element){
         String expression = element.getExpression();
         for(char c : expression.toCharArray()){
-            if(!CharUtils.isOperational(c)){
+            if(!TextUtils.isOperational(c)){
                 return false;
             }
         }

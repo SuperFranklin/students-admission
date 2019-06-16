@@ -7,7 +7,7 @@ import core.converters.PostfixExpressionConverter;
 import core.model.Component;
 import core.model.ShuntingYardElement;
 import core.parsers.ExpressionParser;
-import core.utils.CharUtils;
+import core.utils.TextUtils;
 
 import java.util.List;
 import java.util.Map;
@@ -22,7 +22,7 @@ public class StudentAdmissionCalculatorFacadeImpl implements StudentAdmissionCal
     public boolean isQualified(String expression, Map<String, String> parameters) {
         float qualified = calculateExpression(expression, parameters);
         //convert float value to boolean and return
-        return CharUtils.toBolean(qualified);
+        return TextUtils.toBolean(qualified);
     }
 
     /**

@@ -1,7 +1,5 @@
 package core.model;
 
-import core.utils.CharUtils;
-
 import java.util.ArrayList;
 import java.util.List;
 

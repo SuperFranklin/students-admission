@@ -1,7 +1,7 @@
 package core.parsers;
 
 import core.model.Component;
-import core.utils.CharUtils;
+import core.utils.TextUtils;
 import org.apache.commons.lang3.StringUtils;
 
 import java.util.ArrayList;
@@ -12,12 +12,15 @@ import java.util.regex.Pattern;
 public class ExpressionParser {
 
     private static final Pattern NUMBER_PATTERN = Pattern.compile("^[0-9.]*$");
-    //private static final Pattern DIGIT_GRADE_PATTERN = Pattern.compile("[=><][0-9]");
     private static final Pattern LETTER_GRADE_PATTERN = Pattern.compile("[=><][ABCDE][()&|><=]");
 
+    /**
+     * @param expression
+     * @return list of components with child
+     */
     public List<Component> parse(String expression) {
         expression = expression.trim();
-        boolean hasParenthesis = CharUtils.hasParenthesis(expression);
+        boolean hasParenthesis = TextUtils.hasParenthesis(expression);
         if (!hasParenthesis) {
             return parseExpWithoutParenthesis(expression);
         } else {
@@ -28,17 +31,15 @@ public class ExpressionParser {
 
             return components;
         }
-
     }
 
     private void joinChilds(Component component) {
         String currentExpression = component.getExpression();
-        if (CharUtils.hasParenthesis(currentExpression) && currentExpression.length()>2) {
+        if (TextUtils.hasParenthesis(currentExpression) && currentExpression.length()>2) {
             ExpressionParser parser = new ExpressionParser();
             //currentExpression = currentExpression.substring(1, currentExpression.length()-1);
             List<Component> childs = parser.parseExpWithParenthesis(currentExpression);
             for(Component child : childs){
-                String childExpression = child.getExpression();
                 joinChilds(child);
 
             }
@@ -84,17 +85,17 @@ public class ExpressionParser {
                         currentExpression+=c;
                     }
                 }
-            }else if(!insideParenthesis && CharUtils.isOperational(c)){
+            }else if(!insideParenthesis && TextUtils.isOperational(c)){
                 if(!StringUtils.isWhitespace(currentExpression)){
                     components.add(new Component(currentExpression));
                     //czyścimi aktualnie składane wyrażenie
                     currentExpression = "";
                 }
                 char nextChar = expression.charAt(i+1);
-                if(CharUtils.isOperational(nextChar)){
+                if(TextUtils.isOperational(nextChar)){
                     components.add(new Component(expression.substring(i,i+2)));
                     i++;
-                }else if(CharUtils.isGrade(c)){
+                }else if(TextUtils.isGrade(c)){
                     String result = "";
                     String analyzedExpression = expression.substring(i-1,i+4);
                     Matcher numberMatcher = NUMBER_PATTERN.matcher(analyzedExpression);
@@ -114,7 +115,6 @@ public class ExpressionParser {
                     }
                     components.add(new Component(result));
                     i+=result.length()-1;
-
                 }
                 else{
                     components.add(new Component(Character.toString(c)));
@@ -136,13 +136,13 @@ public class ExpressionParser {
         String currentExpression = "";
         for(int i=0; i<expression.length();i++){
             char c = expression.charAt(i);
-            if(!CharUtils.isOperational(c)){
+            if(!TextUtils.isOperational(c)){
                 currentExpression+=c;
             }else {
                 components.add(new Component(currentExpression));
                 currentExpression = "";
                 char nextChar = expression.charAt(i+1);
-                if(CharUtils.isOperational(nextChar)){
+                if(TextUtils.isOperational(nextChar)){
                     components.add(new Component(expression.substring(i,i+2)));
                     i++;
                 }else{
@@ -156,5 +156,4 @@ public class ExpressionParser {
 
         return components;
     }
-
 }
