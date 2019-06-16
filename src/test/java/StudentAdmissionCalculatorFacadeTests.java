@@ -20,7 +20,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.*;
 
 public class StudentAdmissionCalculatorFacadeTests {
 
@@ -471,6 +471,127 @@ public class StudentAdmissionCalculatorFacadeTests {
         StudentAdmissionCalculatorFacade studentAdmissionCalculatorFacade = new StudentAdmissionCalculatorFacadeImpl();
         boolean qualified = studentAdmissionCalculatorFacade.isQualified(expression, params);
         assertEquals(true, qualified);
+    }
+
+    @Test
+    public void testWithWithoutParenthesis21(){
+        Map<String, String> params = new HashMap<>();
+        params.put("LL","2");
+        params.put("AE","2");
+        params.put("AM","0");
+        params.put("GM","4");
+        params.put("Ch","3");
+        params.put("Ph","0");
+        params.put("Bi","E");
+
+        params.put("LOCAL_PREF","33");
+
+        String expression = "(COUNT_C[LL,AE,Ch,Ph,Bi]>=3)&(COUNT_B[AM,GM]=1)";
+        StudentAdmissionCalculatorFacade studentAdmissionCalculatorFacade = new StudentAdmissionCalculatorFacadeImpl();
+        boolean qualified = studentAdmissionCalculatorFacade.isQualified(expression, params);
+        assertEquals(true, qualified);
+    }
+
+    @Test
+    public void testWithWithoutParenthesis22(){
+        Map<String, String> params = new HashMap<>();
+        params.put("LL","1");
+        params.put("AE","2");
+        params.put("AM","0");
+        params.put("GM","4");
+        params.put("Ch","3");
+        params.put("Ph","0");
+        params.put("Bi","E");
+        params.put("LOCAL_PREF","33");
+
+        String expression = "(COUNT_C[LL,AE,Ch,Ph,Bi]>=3)&(COUNT_B[AM,GM]=1)";
+        StudentAdmissionCalculatorFacade studentAdmissionCalculatorFacade = new StudentAdmissionCalculatorFacadeImpl();
+        boolean qualified = studentAdmissionCalculatorFacade.isQualified(expression, params);
+        assertFalse( qualified);
+    }
+
+    @Test
+    public void testWithWithoutParenthesis23(){
+        Map<String, String> params = new HashMap<>();
+        params.put("LL","4");
+        params.put("AE","2");
+        params.put("AM","0");
+        params.put("GM","B");
+        params.put("Ch","3");
+        params.put("Ph","0");
+        params.put("Bi","E");
+        params.put("LOCAL_PREF","33");
+
+        String expression = "(COUNT_C[LL,AE,Ch,Ph,Bi]>=3)&(COUNT_B[AM,GM]=1)";
+        StudentAdmissionCalculatorFacade studentAdmissionCalculatorFacade = new StudentAdmissionCalculatorFacadeImpl();
+        boolean qualified = studentAdmissionCalculatorFacade.isQualified(expression, params);
+        assertTrue( qualified);
+    }
+
+    @Test
+    public void testWithWithoutParenthesis24(){
+        Map<String, String> params = new HashMap<>();
+        params.put("LL","4");
+        params.put("AE","2");
+        params.put("AM","0");
+        params.put("GM","C");
+        params.put("Ch","3");
+        params.put("Ph","0");
+        params.put("Bi","E");
+        params.put("LOCAL_PREF","33");
+
+        String expression = "(COUNT_C[LL,AE,Ch,Ph,Bi]>=3)&(COUNT_B[AM,GM]=1)";
+        StudentAdmissionCalculatorFacade studentAdmissionCalculatorFacade = new StudentAdmissionCalculatorFacadeImpl();
+        boolean qualified = studentAdmissionCalculatorFacade.isQualified(expression, params);
+        assertFalse( qualified);
+    }
+
+    @Test
+    public void testWithWithoutParenthesis25(){
+        Map<String, String> params = new HashMap<>();
+        params.put("LL","A");
+        params.put("AE","B");
+        params.put("AM","C");
+        params.put("GM","C");
+        params.put("Ch","C");
+        params.put("Ph","C");
+        params.put("Bi","D");
+
+        String expression = "(G[WORST[all]]>=C)";
+        StudentAdmissionCalculatorFacade studentAdmissionCalculatorFacade = new StudentAdmissionCalculatorFacadeImpl();
+        boolean qualified = studentAdmissionCalculatorFacade.isQualified(expression, params);
+        assertFalse( qualified);
+    }
+
+    @Test
+    public void testWithWithoutParenthesis26(){
+        Map<String, String> params = new HashMap<>();
+        params.put("LL","A");
+        params.put("AE","B");
+        params.put("AM","C");
+        params.put("GM","C");
+        params.put("Ch","C");
+        params.put("Ph","C");
+        params.put("Bi","C");
+
+        String expression = "(G[WORST[all]]>=C)";
+        StudentAdmissionCalculatorFacade studentAdmissionCalculatorFacade = new StudentAdmissionCalculatorFacadeImpl();
+        boolean qualified = studentAdmissionCalculatorFacade.isQualified(expression, params);
+        assertTrue( qualified);
+    }
+
+    @Test
+    public void testWithWithoutParenthesis27(){
+        Map<String, String> params = new HashMap<>();
+        params.put("LL","C");
+        params.put("AE","C");
+        params.put("AM","C");
+        params.put("GM","B");
+
+        String expression = "(GPA[ALL]>=2.25)";
+        StudentAdmissionCalculatorFacade studentAdmissionCalculatorFacade = new StudentAdmissionCalculatorFacadeImpl();
+        boolean qualified = studentAdmissionCalculatorFacade.isQualified(expression, params);
+        assertTrue( qualified);
     }
 
 

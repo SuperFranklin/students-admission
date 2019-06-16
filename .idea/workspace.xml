@@ -1,14 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="69fdcd23-9ebb-421a-b5f7-7c61ad1a86e7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/resources/all_ranking_functions.csv" afterDir="false" />
+    <list default="true" id="69fdcd23-9ebb-421a-b5f7-7c61ad1a86e7" name="Default Changelist" comment="added tests for all ranking queries execution">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/core/facade/StudentAdmissionCalculatorFacadeImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/core/facade/StudentAdmissionCalculatorFacadeImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/core/parsers/ExpressionParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/core/parsers/ExpressionParser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/StudentAdmissionCalculatorFacadeTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/StudentAdmissionCalculatorFacadeTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/core/facade/StudentAdmissionCalculatorFacadeImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/core/facade/StudentAdmissionCalculatorFacadeImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/core/parsers/ExpressionParser.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/core/parsers/ExpressionParser.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/StudentAdmissionCalculatorFacadeTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/StudentAdmissionCalculatorFacadeTests.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -46,6 +42,7 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="SONARLINT_PRECOMMIT_ANALYSIS" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="extract.method.default.visibility" value="private" />
@@ -61,6 +58,7 @@
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="restartRequiresConfirmation" value="false" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
@@ -84,57 +82,58 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.StudentAdmissionCalculatorFacadeTests">
+  <component name="RunManager" selected="JUnit.StudentAdmissionCalculatorFacadeTests.testWithWithoutParenthesis27">
     <configuration name="Unnamed" type="Application" factoryName="Application" nameIsGenerated="true">
       <module name="ExpressionsLIbrary" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="StudentAdmissionCalculatorFacadeTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="StudentAdmissionCalculatorFacadeTests.testWithWithoutParenthesis23" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="expressions-library" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="StudentAdmissionCalculatorFacadeTests" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="StudentAdmissionCalculatorFacadeTests.testExecutionAllFunctions" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="expressions-library" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="StudentAdmissionCalculatorFacadeTests" />
-      <option name="METHOD_NAME" value="testExecutionAllFunctions" />
+      <option name="METHOD_NAME" value="testWithWithoutParenthesis23" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="StudentAdmissionCalculatorFacadeTests.testWithDoubledParenthesis" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="StudentAdmissionCalculatorFacadeTests.testWithWithoutParenthesis24" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="expressions-library" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="StudentAdmissionCalculatorFacadeTests" />
-      <option name="METHOD_NAME" value="testWithDoubledParenthesis" />
+      <option name="METHOD_NAME" value="testWithWithoutParenthesis24" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="StudentAdmissionCalculatorFacadeTests.testWithWithoutParenthesis19" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="StudentAdmissionCalculatorFacadeTests.testWithWithoutParenthesis25" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="expressions-library" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="StudentAdmissionCalculatorFacadeTests" />
-      <option name="METHOD_NAME" value="testWithWithoutParenthesis19" />
+      <option name="METHOD_NAME" value="testWithWithoutParenthesis25" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="StudentAdmissionCalculatorFacadeTests.testWithWithoutParenthesis20" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="StudentAdmissionCalculatorFacadeTests.testWithWithoutParenthesis26" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="expressions-library" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="StudentAdmissionCalculatorFacadeTests" />
-      <option name="METHOD_NAME" value="testWithWithoutParenthesis20" />
+      <option name="METHOD_NAME" value="testWithWithoutParenthesis26" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="StudentAdmissionCalculatorFacadeTests.testWithWithoutParenthesis27" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="expressions-library" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="StudentAdmissionCalculatorFacadeTests" />
+      <option name="METHOD_NAME" value="testWithWithoutParenthesis27" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -189,19 +188,19 @@
     </configuration>
     <list>
       <item itemvalue="Application.Unnamed" />
-      <item itemvalue="JUnit.StudentAdmissionCalculatorFacadeTests" />
-      <item itemvalue="JUnit.StudentAdmissionCalculatorFacadeTests.testExecutionAllFunctions" />
-      <item itemvalue="JUnit.StudentAdmissionCalculatorFacadeTests.testWithDoubledParenthesis" />
-      <item itemvalue="JUnit.StudentAdmissionCalculatorFacadeTests.testWithWithoutParenthesis19" />
-      <item itemvalue="JUnit.StudentAdmissionCalculatorFacadeTests.testWithWithoutParenthesis20" />
+      <item itemvalue="JUnit.StudentAdmissionCalculatorFacadeTests.testWithWithoutParenthesis23" />
+      <item itemvalue="JUnit.StudentAdmissionCalculatorFacadeTests.testWithWithoutParenthesis24" />
+      <item itemvalue="JUnit.StudentAdmissionCalculatorFacadeTests.testWithWithoutParenthesis25" />
+      <item itemvalue="JUnit.StudentAdmissionCalculatorFacadeTests.testWithWithoutParenthesis26" />
+      <item itemvalue="JUnit.StudentAdmissionCalculatorFacadeTests.testWithWithoutParenthesis27" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.StudentAdmissionCalculatorFacadeTests" />
-        <item itemvalue="JUnit.StudentAdmissionCalculatorFacadeTests.testExecutionAllFunctions" />
-        <item itemvalue="JUnit.StudentAdmissionCalculatorFacadeTests.testWithWithoutParenthesis20" />
-        <item itemvalue="JUnit.StudentAdmissionCalculatorFacadeTests.testWithWithoutParenthesis19" />
-        <item itemvalue="JUnit.StudentAdmissionCalculatorFacadeTests.testWithDoubledParenthesis" />
+        <item itemvalue="JUnit.StudentAdmissionCalculatorFacadeTests.testWithWithoutParenthesis27" />
+        <item itemvalue="JUnit.StudentAdmissionCalculatorFacadeTests.testWithWithoutParenthesis26" />
+        <item itemvalue="JUnit.StudentAdmissionCalculatorFacadeTests.testWithWithoutParenthesis25" />
+        <item itemvalue="JUnit.StudentAdmissionCalculatorFacadeTests.testWithWithoutParenthesis24" />
+        <item itemvalue="JUnit.StudentAdmissionCalculatorFacadeTests.testWithWithoutParenthesis23" />
       </list>
     </recent_temporary>
   </component>
@@ -230,7 +229,8 @@
       <workItem from="1560578731891" duration="18591000" />
       <workItem from="1560625759605" duration="8665000" />
       <workItem from="1560665782868" duration="10327000" />
-      <workItem from="1560685515069" duration="1969000" />
+      <workItem from="1560685515069" duration="2301000" />
+      <workItem from="1560688005778" duration="2610000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1560471616169</created>
@@ -330,7 +330,21 @@
       <option name="project" value="LOCAL" />
       <updated>1560679533472</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="added tests for all ranking queries execution">
+      <created>1560687823234</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1560687823235</updated>
+    </task>
+    <task id="LOCAL-00016" summary="added tests for all ranking queries execution">
+      <created>1560688213791</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1560688213792</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -363,7 +377,19 @@
     <MESSAGE value="another fixes, added test of execution all functions" />
     <MESSAGE value="refactoring of functions" />
     <MESSAGE value="refactoring" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactoring" />
+    <MESSAGE value="added tests for all ranking queries execution" />
+    <option name="LAST_COMMIT_MESSAGE" value="added tests for all ranking queries execution" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/StudentAdmissionCalculatorFacadeTests.java</url>
+          <line>491</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/ExpressionsLIbrary$StudentAdmissionCalculatorFacadeTests_testWithParenthesis10.ic" NAME="StudentAdmissionCalculatorFacadeTests.testWithParenthesis10 Coverage Results" MODIFIED="1560586677398" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />

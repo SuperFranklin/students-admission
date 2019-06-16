@@ -26,7 +26,7 @@ public class GPAFunction implements Function {
      */
     @Override
     public String calculate() {
-        if("GPA[all]".equals(expression)){
+        if("GPA[all]".equalsIgnoreCase(expression)){
             String[] subjects = SubjectParser.subjects(parameters);
             return gpa(Arrays.asList(subjects));
         }else{
