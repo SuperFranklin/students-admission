@@ -2,6 +2,7 @@ package core.parsers;
 
 import core.model.Component;
 import core.utils.CharUtils;
+import org.apache.commons.lang3.StringUtils;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -83,7 +84,7 @@ public class ExpressionParser {
                     }
                 }
             }else if(!insideParenthesis && CharUtils.isOperational(c)){
-                if(!currentExpression.isEmpty()){
+                if(!StringUtils.isWhitespace(currentExpression)){
                     components.add(new Component(currentExpression));
                     //czyścimi aktualnie składane wyrażenie
                     currentExpression = "";

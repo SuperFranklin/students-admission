@@ -2,33 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="69fdcd23-9ebb-421a-b5f7-7c61ad1a86e7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/core/functions/Best2Function.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/core/functions/CountAFunction.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/core/calculators/ComponentCalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/core/calculators/ComponentCalculator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/core/calculators/OperatorCalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/core/calculators/OperatorCalculator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/core/functions/BestFunction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/core/functions/BestFunction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/core/functions/CountBFunction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/core/functions/CountBFunction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/core/functions/CountCFunction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/core/functions/CountCFunction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/core/functions/CountDFunction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/core/functions/CountDFunction.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/core/functions/FunctionFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/core/functions/FunctionFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/core/functions/GFunction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/core/functions/GFunction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/core/functions/GPAFunction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/core/functions/GPAFunction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/core/functions/LocalPrefFunction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/core/functions/LocalPrefFunction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/core/functions/SingleResultFunction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/core/functions/Function.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/core/functions/StatPFUnction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/core/functions/StatPFUnction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/core/functions/WAVGFunction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/core/functions/WAVGFunction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/core/functions/WorstFunction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/core/functions/WorstFunction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/core/parsers/ExpressionParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/core/parsers/ExpressionParser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/StudentAdmissionCalculatorFacadeTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/StudentAdmissionCalculatorFacadeTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/core/calculators/ComponentCalculator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/core/calculators/ComponentCalculator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/core/functions/BestFunction.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/core/functions/BestFunction.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/core/functions/CountCFunction.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/core/functions/CountCFunction.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/core/functions/FunctionFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/core/functions/FunctionFactory.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/core/functions/GFunction.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/core/functions/GFunction.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/core/functions/GPAFunction.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/core/functions/GPAFunction.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/core/functions/SingleResultFunction.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/core/functions/StatPFUnction.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/core/functions/StatPFUnction.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/core/functions/WorstFunction.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/core/functions/WorstFunction.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/core/calculators/OperatorCalculator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/core/calculators/OperatorCalculator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/core/parsers/ExpressionParser.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/core/parsers/ExpressionParser.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/StudentAdmissionCalculatorFacadeTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/StudentAdmissionCalculatorFacadeTests.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -62,12 +44,6 @@
         <option name="importAutomatically" value="true" />
       </MavenImportingSettings>
     </option>
-  </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="61" />
-    <option name="y" value="27" />
-    <option name="width" value="1295" />
-    <option name="height" value="555" />
   </component>
   <component name="ProjectId" id="1MeaqeCaOzZMydFfTfkl5zYvYGf" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -126,21 +102,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="StudentAdmissionCalculatorFacadeTests.testRanking6" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="StudentAdmissionCalculatorFacadeTests.testExecutionAllFunctions" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="expressions-library" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="StudentAdmissionCalculatorFacadeTests" />
-      <option name="METHOD_NAME" value="testRanking6" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="StudentAdmissionCalculatorFacadeTests.testRanking7" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="expressions-library" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="StudentAdmissionCalculatorFacadeTests" />
-      <option name="METHOD_NAME" value="testRanking7" />
+      <option name="METHOD_NAME" value="testExecutionAllFunctions" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -151,6 +117,16 @@
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="StudentAdmissionCalculatorFacadeTests" />
       <option name="METHOD_NAME" value="testRanking8" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="StudentAdmissionCalculatorFacadeTests.testWithDoubledParenthesis" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="expressions-library" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="StudentAdmissionCalculatorFacadeTests" />
+      <option name="METHOD_NAME" value="testWithDoubledParenthesis" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -216,18 +192,18 @@
     <list>
       <item itemvalue="Application.Unnamed" />
       <item itemvalue="JUnit.StudentAdmissionCalculatorFacadeTests" />
-      <item itemvalue="JUnit.StudentAdmissionCalculatorFacadeTests.testRanking6" />
-      <item itemvalue="JUnit.StudentAdmissionCalculatorFacadeTests.testRanking7" />
       <item itemvalue="JUnit.StudentAdmissionCalculatorFacadeTests.testRanking8" />
       <item itemvalue="JUnit.StudentAdmissionCalculatorFacadeTests.testWithParenthesisAndBest218" />
+      <item itemvalue="JUnit.StudentAdmissionCalculatorFacadeTests.testExecutionAllFunctions" />
+      <item itemvalue="JUnit.StudentAdmissionCalculatorFacadeTests.testWithDoubledParenthesis" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.StudentAdmissionCalculatorFacadeTests" />
+        <item itemvalue="JUnit.StudentAdmissionCalculatorFacadeTests.testWithDoubledParenthesis" />
+        <item itemvalue="JUnit.StudentAdmissionCalculatorFacadeTests.testExecutionAllFunctions" />
         <item itemvalue="JUnit.StudentAdmissionCalculatorFacadeTests.testWithParenthesisAndBest218" />
         <item itemvalue="JUnit.StudentAdmissionCalculatorFacadeTests.testRanking8" />
-        <item itemvalue="JUnit.StudentAdmissionCalculatorFacadeTests.testRanking7" />
-        <item itemvalue="JUnit.StudentAdmissionCalculatorFacadeTests.testRanking6" />
       </list>
     </recent_temporary>
   </component>
@@ -254,7 +230,8 @@
       <workItem from="1560528294963" duration="4516000" />
       <workItem from="1560547740825" duration="322000" />
       <workItem from="1560578731891" duration="18591000" />
-      <workItem from="1560625759605" duration="7616000" />
+      <workItem from="1560625759605" duration="8665000" />
+      <workItem from="1560665782868" duration="2360000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1560471616169</created>
@@ -319,7 +296,14 @@
       <option name="project" value="LOCAL" />
       <updated>1560628999613</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="added implementation of BEST_2 function">
+      <created>1560633401533</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1560633401533</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -347,20 +331,16 @@
     <MESSAGE value="weighted average implementation" />
     <MESSAGE value="ranking tests bugs fixed" />
     <MESSAGE value="fixed bug with copying reference to properties" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed bug with copying reference to properties" />
+    <MESSAGE value="added implementation of BEST_2 function" />
+    <option name="LAST_COMMIT_MESSAGE" value="added implementation of BEST_2 function" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <breakpoint enabled="true" type="java-exception">
-          <properties class="java.lang.NumberFormatException" package="java.lang" />
-          <option name="timeStamp" value="166" />
+          <properties class="java.lang.NullPointerException" package="java.lang" />
+          <option name="timeStamp" value="184" />
         </breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/core/functions/GPAFunction.java</url>
-          <line>65</line>
-          <option name="timeStamp" value="169" />
-        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>

@@ -21,6 +21,9 @@ public class FunctionFactory {
         if(functionExp.equals("STAT_P")){
             return new StatPFUnction(parameters);
         }
+        if(functionExp.equals("COUNT_A")){
+            return new CountAFunction(expression,parameters);
+        }
         if(functionExp.equals("COUNT_C")){
             return new CountCFunction(expression,parameters);
         }

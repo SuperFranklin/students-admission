@@ -24,6 +24,7 @@ public class OperatorCalculator {
             float first = firstElement.getValue();
             float second = secondElement.getValue();
 
+
             if(first >= second){
                 return TRUE;
             }else{

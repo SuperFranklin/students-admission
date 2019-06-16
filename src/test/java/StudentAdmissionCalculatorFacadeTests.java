@@ -11,6 +11,11 @@ import org.apache.commons.lang3.builder.EqualsExclude;
 import org.junit.Assert;
 import org.junit.Test;
 
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -400,17 +405,26 @@ public class StudentAdmissionCalculatorFacadeTests {
         params.put("BS","D");
         params.put("LS","E");
         params.put("ICT","3");
+        params.put("LOCAL_PREF","33");
 
         String expression = "(((G[LL]>=B)|(G[AE]>B)&((G[GM]>=C)|(G[AM]>=B)))&(GPA[BEST_2[Ec,Ge,Hi,Ph,Ch,Bi,Geo,Acc,BS,LS,ICT]]>=2.5))";
         StudentAdmissionCalculatorFacade studentAdmissionCalculatorFacade = new StudentAdmissionCalculatorFacadeImpl();
         boolean qualified = studentAdmissionCalculatorFacade.isQualified(expression, params);
         assertEquals(false, qualified);
     }
+    @Test
+    public void testWithDoubledParenthesis(){
+        Map<String, String> params = new HashMap<>();
+        params.put("LL","E");
+        params.put("AM","B");
+        params.put("Ph","A");
+        params.put("TS","50");
 
-
-
-
-
+        String expression = "((COUNT_B[LL,Ph,AM]>=3)) & STAT_P[TS] > 0";
+        StudentAdmissionCalculatorFacade studentAdmissionCalculatorFacade = new StudentAdmissionCalculatorFacadeImpl();
+        boolean qualified = studentAdmissionCalculatorFacade.isQualified(expression, params);
+        assertEquals(false, qualified);
+    }
 
 
 
@@ -525,6 +539,51 @@ public class StudentAdmissionCalculatorFacadeTests {
         assertEquals(23.0f, rankigPoints, 0.0001f);
     }
 
+
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    //***********************************TESTY WYKONANIA WSZYSTKICH FUNKCJI*********************************************
+    @Test
+    public void testExecutionAllFunctions() throws IOException {
+        Map<String, String> params = new HashMap<>();
+        params.put("LL","E");
+        params.put("AE","C");
+        params.put("AM","B");
+        params.put("GM","B");
+        params.put("CH","A");
+        params.put("TS","50");
+        params.put("Ch","E");
+        params.put("Bi","C");
+        params.put("Ec","B");
+        params.put("Gr","B");
+        params.put("Ge","A");
+        params.put("Hi","E");
+        params.put("Geo","C");
+        params.put("Acc","B");
+        params.put("BS","D");
+        params.put("LS","E");
+        params.put("AC","D");
+        params.put("GI","D");
+        params.put("Ph","C");
+        params.put("IT","B");
+        params.put("AS","C");
+        params.put("BC","D");
+        params.put("ICT","3");
+        params.put("LOCAL_PREF","33");
+
+        ClassLoader classLoader = getClass().getClassLoader();
+        File file = new File(classLoader.getResource("all_functions.csv").getFile());
+        try (BufferedReader br = new BufferedReader(new FileReader(file))) {
+            String function;
+            int i=0;
+            while ((function = br.readLine()) != null) {
+                System.out.println(i);
+                StudentAdmissionCalculatorFacade studentAdmissionCalculatorFacade = new StudentAdmissionCalculatorFacadeImpl();
+                studentAdmissionCalculatorFacade.isQualified(function,params);
+
+                i++;
+            }
+        }
+    }
 
 
 
