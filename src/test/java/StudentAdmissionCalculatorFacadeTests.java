@@ -425,6 +425,74 @@ public class StudentAdmissionCalculatorFacadeTests {
         boolean qualified = studentAdmissionCalculatorFacade.isQualified(expression, params);
         assertEquals(false, qualified);
     }
+    @Test
+    public void testWithWithoutParenthesis19(){
+        Map<String, String> params = new HashMap<>();
+        params.put("LL","E");
+        params.put("AE","C");
+        params.put("AM","B");
+        params.put("GM","B");
+        params.put("CH","A");
+        params.put("TS","50");
+        params.put("Ch","E");
+        params.put("Bi","C");
+        params.put("Ec","B");
+        params.put("Gr","B");
+        params.put("Ge","A");
+        params.put("Hi","E");
+        params.put("Geo","C");
+        params.put("Acc","B");
+        params.put("BS","D");
+        params.put("LS","E");
+        params.put("AC","D");
+        params.put("GI","D");
+        params.put("Ph","C");
+        params.put("IT","B");
+        params.put("AS","C");
+        params.put("BC","D");
+        params.put("ICT","3");
+        params.put("LOCAL_PREF","33");
+
+        String expression = "(G[WORST[all]]>=C)&(GPA[all]>=2.25)";
+        StudentAdmissionCalculatorFacade studentAdmissionCalculatorFacade = new StudentAdmissionCalculatorFacadeImpl();
+        boolean qualified = studentAdmissionCalculatorFacade.isQualified(expression, params);
+        assertEquals(false, qualified);
+    }
+
+    @Test
+    public void testWithWithoutParenthesis20(){
+        Map<String, String> params = new HashMap<>();
+        params.put("LL","E");
+        params.put("AE","C");
+        params.put("AM","B");
+        params.put("GM","B");
+        params.put("CH","A");
+        params.put("TS","50");
+        params.put("Ch","E");
+        params.put("Bi","C");
+        params.put("Ec","B");
+        params.put("Gr","B");
+        params.put("Ge","A");
+        params.put("Hi","E");
+        params.put("Geo","C");
+        params.put("Acc","B");
+        params.put("BS","D");
+        params.put("LS","E");
+        params.put("AC","D");
+        params.put("GI","D");
+        params.put("Ph","C");
+        params.put("IT","B");
+        params.put("AS","C");
+        params.put("BC","D");
+        params.put("ICT","3");
+        params.put("LOCAL_PREF","33");
+
+        String expression = "((G[GM]>=C)|(G[AM]>=C))&((G[AE]>=C)|(G[LL]>=C)) ";
+        StudentAdmissionCalculatorFacade studentAdmissionCalculatorFacade = new StudentAdmissionCalculatorFacadeImpl();
+        boolean qualified = studentAdmissionCalculatorFacade.isQualified(expression, params);
+        assertEquals(true, qualified);
+    }
+
 
 
 
@@ -549,6 +617,10 @@ public class StudentAdmissionCalculatorFacadeTests {
         params.put("AE","C");
         params.put("AM","B");
         params.put("GM","B");
+        params.put("Ac","C");
+        params.put("Gc","C");
+        params.put("Ag","C");
+        params.put("Gl","C");
         params.put("CH","A");
         params.put("TS","50");
         params.put("Ch","E");
@@ -564,6 +636,7 @@ public class StudentAdmissionCalculatorFacadeTests {
         params.put("AC","D");
         params.put("GI","D");
         params.put("Ph","C");
+        params.put("ph","C");
         params.put("IT","B");
         params.put("AS","C");
         params.put("BC","D");
@@ -576,10 +649,13 @@ public class StudentAdmissionCalculatorFacadeTests {
             String function;
             int i=0;
             while ((function = br.readLine()) != null) {
-                System.out.println(i);
+                if(function.isEmpty()){
+                    break;
+                }
+                //wypisuje wiersz, który aktulanie jest testowany
+                System.out.println("testing row: " + i);
                 StudentAdmissionCalculatorFacade studentAdmissionCalculatorFacade = new StudentAdmissionCalculatorFacadeImpl();
                 studentAdmissionCalculatorFacade.isQualified(function,params);
-
                 i++;
             }
         }

@@ -3,19 +3,19 @@ package core.utils;
 public class GradeUtils {
 
     public static int toNumber(String grade){
-        if("A".equals(grade)){
+        if("A".equalsIgnoreCase(grade)){
             return 4;
         }
-        if("B".equals(grade)){
+        if("B".equalsIgnoreCase(grade)){
             return 3;
         }
-        if("C".equals(grade)){
+        if("C".equalsIgnoreCase(grade)){
             return 2;
         }
-        if("D".equals(grade)){
+        if("D".equalsIgnoreCase(grade)){
             return 1;
         }
-        if("E".equals(grade)){
+        if("E".equalsIgnoreCase(grade)){
             return 0;
         }
 

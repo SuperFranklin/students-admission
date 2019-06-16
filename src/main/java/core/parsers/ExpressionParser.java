@@ -16,6 +16,7 @@ public class ExpressionParser {
     private static final Pattern LETTER_GRADE_PATTERN = Pattern.compile("[=><][ABCDE][()&|><=]");
 
     public List<Component> parse(String expression) {
+        expression = expression.trim();
         boolean hasParenthesis = CharUtils.hasParenthesis(expression);
         if (!hasParenthesis) {
             return parseExpWithoutParenthesis(expression);
@@ -149,7 +150,9 @@ public class ExpressionParser {
                 }
             }
         }
-        components.add(new Component(currentExpression));
+        if(!currentExpression.isEmpty()) {
+            components.add(new Component(currentExpression));
+        }
 
         return components;
     }

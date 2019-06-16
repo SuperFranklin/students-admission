@@ -20,17 +20,7 @@ public class StudentAdmissionCalculatorFacadeImpl implements StudentAdmissionCal
      */
     @Override
     public boolean isQualified(String expression, Map<String, String> parameters) {
-        ExpressionParser expressionParser = new ExpressionParser();
-        //parse expression to components with childs
-        List<Component> parse = expressionParser.parse(expression);
-        //convert all components to infix notation - flattering the structure
-        List<ShuntingYardElement> infixNotationComponents = InfixExpressionConverter.convert(parse);
-        //convert components to postfix notation
-        List<ShuntingYardElement> postfix = PostfixExpressionConverter.postfix(infixNotationComponents);
-        //calculate value for non sign components
-        List<ShuntingYardElement> calculated = ComponentCalculator.calculate(postfix, parameters);
-        //calculate result as float
-        float qualified = PostfixCalculator.calculate(calculated);
+        float qualified = calculateExpression(expression, parameters);
         //convert float value to boolean and return
         return CharUtils.toBolean(qualified);
     }
@@ -42,6 +32,11 @@ public class StudentAdmissionCalculatorFacadeImpl implements StudentAdmissionCal
      */
     @Override
     public float calculateRankingPoints(String expression, Map<String, String> parameters) {
+        float rankingPoints = calculateExpression(expression, parameters);
+        return rankingPoints;
+    }
+
+    private float calculateExpression(String expression, Map<String, String> parameters) {
         ExpressionParser expressionParser = new ExpressionParser();
         //parse expression to components with childs
         List<Component> parse = expressionParser.parse(expression);
@@ -52,7 +47,6 @@ public class StudentAdmissionCalculatorFacadeImpl implements StudentAdmissionCal
         //calculate value for non sign components
         List<ShuntingYardElement> calculated = ComponentCalculator.calculate(postfix, parameters);
         //calculate result as float
-        float rankingPoints = PostfixCalculator.calculate(calculated);
-        return rankingPoints;
+        return PostfixCalculator.calculate(calculated);
     }
 }

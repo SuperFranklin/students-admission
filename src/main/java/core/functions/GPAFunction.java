@@ -1,5 +1,6 @@
 package core.functions;
 
+import core.parsers.SubjectParser;
 import core.utils.CharUtils;
 import core.utils.FunctionUtils;
 import core.utils.GradeUtils;
@@ -18,15 +19,13 @@ public class GPAFunction implements Function {
     public GPAFunction(String expression, Map<String,String> parameters){
         this.expression = expression;
         this.parameters.putAll(parameters);
-        if(this.parameters.containsKey("LOCAL_PREF")){
-            this.parameters.remove("LOCAL_PREF");
-        }
     }
 
     @Override
     public String calculate() {
         if("GPA[all]".equals(expression)){
-            return gpa(parameters.keySet());
+            Set<String> subjects = SubjectParser.subjects(parameters);
+            return gpa(subjects);
         }else{
             if (FunctionUtils.numOfFunctions(expression) > 1) {
                 Matcher matcher = FUNCTION_PATTERN.matcher(expression);

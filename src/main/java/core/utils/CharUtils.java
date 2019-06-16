@@ -20,6 +20,9 @@ public class CharUtils {
     }
 
     public static boolean isNumber(String s){
+        if(s.isEmpty()){
+            return false;
+        }
         Matcher numberMatcher = NUMBER_PATTERN.matcher(s);
 
         return numberMatcher.matches();
@@ -61,7 +64,7 @@ public class CharUtils {
             return false;
         }
         char c = value.charAt(0);
-        char[] signs = {'A','B','C','D','E','0','1','2','3','4'};
+        char[] signs = {'A','B','C','D','E','0','1','2','3','4','a','b','c','c','e'};
         for(char sign : signs){
             if(sign == c){
                 return true;
