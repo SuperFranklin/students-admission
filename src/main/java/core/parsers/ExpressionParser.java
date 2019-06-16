@@ -33,6 +33,10 @@ public class ExpressionParser {
         }
     }
 
+    /**
+     * @param component
+     * metoda dołącza dzieci dla danego componentu na podstawie jego wyrażenia
+     */
     private void joinChilds(Component component) {
         String currentExpression = component.getExpression();
         if (TextUtils.hasParenthesis(currentExpression) && currentExpression.length()>2) {
@@ -41,7 +45,6 @@ public class ExpressionParser {
             List<Component> childs = parser.parseExpWithParenthesis(currentExpression);
             for(Component child : childs){
                 joinChilds(child);
-
             }
             component.setChilds(childs);
         }else if(currentExpression.length()>3){
@@ -53,6 +56,10 @@ public class ExpressionParser {
 
     }
 
+    /**
+     * @param expression
+     * @return listę komponentów na podstawie
+     */
     private List<Component> parseExpWithParenthesis(String expression) {
         List<Component> components = new ArrayList<>();
         String currentExpression = "";
