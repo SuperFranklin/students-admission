@@ -1,23 +1,12 @@
-import core.calculators.ComponentCalculator;
-import core.calculators.PostfixCalculator;
-import core.converters.PostfixExpressionConverter;
 import core.facade.StudentAdmissionCalculatorFacade;
 import core.facade.StudentAdmissionCalculatorFacadeImpl;
-import core.model.Component;
-import core.model.ShuntingYardElement;
-import core.parsers.ExpressionParser;
-import core.converters.InfixExpressionConverter;
-import org.apache.commons.lang3.builder.EqualsExclude;
-import org.junit.Assert;
 import org.junit.Test;
 
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 import static org.junit.Assert.*;
@@ -593,8 +582,105 @@ public class StudentAdmissionCalculatorFacadeTests {
         boolean qualified = studentAdmissionCalculatorFacade.isQualified(expression, params);
         assertTrue( qualified);
     }
+    @Test
+    public void testWithWithoutParenthesis28(){
+        Map<String, String> params = new HashMap<>();
+        params.put("LL","D");
+        params.put("AE","D");
+        params.put("AM","C");
+        params.put("GM","B");
+        params.put("TS","2");
 
+        String expression = "((G[BEST[LL,AE]]>=C)&((G[AM]>=C)|(G[GM]>=C)))&STAT_P[TS]>0";
+        StudentAdmissionCalculatorFacade studentAdmissionCalculatorFacade = new StudentAdmissionCalculatorFacadeImpl();
+        boolean qualified = studentAdmissionCalculatorFacade.isQualified(expression, params);
+        assertFalse( qualified);
+    }
+    @Test
+    public void testWithWithoutParenthesis29(){
+        Map<String, String> params = new HashMap<>();
+        params.put("LL","D");
+        params.put("AE","C");
+        params.put("AM","C");
+        params.put("GM","B");
+        params.put("TS","1");
 
+        String expression = "((G[BEST[LL,AE]]>=C)&((G[AM]>=C)|(G[GM]>=C)))&STAT_P[TS]>0";
+        StudentAdmissionCalculatorFacade studentAdmissionCalculatorFacade = new StudentAdmissionCalculatorFacadeImpl();
+        boolean qualified = studentAdmissionCalculatorFacade.isQualified(expression, params);
+        assertTrue( qualified);
+    }
+    @Test
+    public void testWithWithoutParenthesis30(){
+        Map<String, String> params = new HashMap<>();
+        params.put("LL","E");
+        params.put("AE","E");
+        params.put("AM","C");
+        params.put("GM","B");
+        params.put("Bi","B");
+        params.put("Ch","B");
+        params.put("Ph","B");
+        params.put("TS","1");
+
+        String expression = "(COUNT_D[LL,AE]=1)&((G[AM]>=D)|(G[GM]>=D))&(G[Bi]>=D)&(COUNT_D[Ch,Ph]>=1)&(STAT_P[TS]>0)";
+        StudentAdmissionCalculatorFacade studentAdmissionCalculatorFacade = new StudentAdmissionCalculatorFacadeImpl();
+        boolean qualified = studentAdmissionCalculatorFacade.isQualified(expression, params);
+        assertFalse( qualified);
+    }
+
+    @Test
+    public void testWithWithoutParenthesis31(){
+        Map<String, String> params = new HashMap<>();
+        params.put("LL","E");
+        params.put("AE","D");
+        params.put("AM","C");
+        params.put("GM","B");
+        params.put("Bi","B");
+        params.put("Ch","B");
+        params.put("Ph","B");
+        params.put("TS","1");
+
+        String expression = "(COUNT_D[LL,AE]=1)&((G[AM]>=D)|(G[GM]>=D))&(G[Bi]>=D)&(COUNT_D[Ch,Ph]>=1)&(STAT_P[TS]>0)";
+        StudentAdmissionCalculatorFacade studentAdmissionCalculatorFacade = new StudentAdmissionCalculatorFacadeImpl();
+        boolean qualified = studentAdmissionCalculatorFacade.isQualified(expression, params);
+        assertTrue( qualified);
+    }
+
+    @Test
+    public void testWithWithoutParenthesis32(){
+        Map<String, String> params = new HashMap<>();
+        params.put("LL","E");
+        params.put("AE","D");
+        params.put("AM","B");
+        params.put("GM","B");
+        params.put("Bi","B");
+        params.put("Ch","B");
+        params.put("Ph","B");
+        params.put("TS","1");
+
+        String expression = "((COUNT_A[Ch,Ph,AM]>=1)&(COUNT_B[Ch,AM,Ph,LL]>=3))&STAT_P[TS]>0";
+        StudentAdmissionCalculatorFacade studentAdmissionCalculatorFacade = new StudentAdmissionCalculatorFacadeImpl();
+        boolean qualified = studentAdmissionCalculatorFacade.isQualified(expression, params);
+        assertFalse( qualified);
+    }
+
+    @Test
+    public void testWithWithoutParenthesis33(){
+        Map<String, String> params = new HashMap<>();
+        params.put("LL","E");
+        params.put("AE","D");
+        params.put("AM","B");
+        params.put("GM","B");
+        params.put("Bi","B");
+        params.put("Ch","B");
+        params.put("Ph","A");
+        params.put("TS","1");
+
+        String expression = "((COUNT_A[Ch,Ph,AM]>=1)&(COUNT_B[Ch,AM,Ph,LL]>=3))&STAT_P[TS]>0";
+        StudentAdmissionCalculatorFacade studentAdmissionCalculatorFacade = new StudentAdmissionCalculatorFacadeImpl();
+        boolean qualified = studentAdmissionCalculatorFacade.isQualified(expression, params);
+        assertTrue( qualified);
+    }
 
 
     /////////////////////////////////////////////////////////////////////////////////////////////
@@ -707,6 +793,23 @@ public class StudentAdmissionCalculatorFacadeTests {
         float rankigPoints = studentAdmissionCalculatorFacade.calculateRankingPoints(expression, params);
         assertEquals(23.0f, rankigPoints, 0.0001f);
     }
+
+    @Test
+    public void testRanking9(){
+        Map<String, String> params = new HashMap<>();
+        params.put("Ch","A");
+        params.put("Gr","B");
+        params.put("IT","C");
+        params.put("GM","B");
+        params.put("LOCAL_PREF","10");
+
+        String expression = "W_AVG[5G[Ch],10GPA[all],10LOCAL_PREF[]]";
+        StudentAdmissionCalculatorFacade studentAdmissionCalculatorFacade = new StudentAdmissionCalculatorFacadeImpl();
+        float rankigPoints = studentAdmissionCalculatorFacade.calculateRankingPoints(expression, params);
+        assertEquals(6.0f, rankigPoints, 0.0001f);
+    }
+
+
 
 
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

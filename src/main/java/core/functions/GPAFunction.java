@@ -40,6 +40,7 @@ public class GPAFunction implements Function {
 
     }
 
+
     private void expandExpression() {
         Matcher matcher = FUNCTION_PATTERN.matcher(expression);
         matcher.find();
