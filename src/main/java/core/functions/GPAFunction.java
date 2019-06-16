@@ -21,27 +21,34 @@ public class GPAFunction implements Function {
         this.parameters.putAll(parameters);
     }
 
+    /**
+     * @return GPA of subjects
+     */
     @Override
     public String calculate() {
         if("GPA[all]".equals(expression)){
-            Set<String> subjects = SubjectParser.subjects(parameters);
-            return gpa(subjects);
+            String[] subjects = SubjectParser.subjects(parameters);
+            return gpa(Arrays.asList(subjects));
         }else{
             if (FunctionUtils.numOfFunctions(expression) > 1) {
-                Matcher matcher = FUNCTION_PATTERN.matcher(expression);
-                matcher.find();
-                int start = matcher.start();
-                int end = matcher.end();
-                String insideFunction = expression.substring(start,end-1);
-                Function function = FunctionFactory.getFunction(insideFunction, parameters);
-                String result = function.calculate();
-                expression = expression.replaceAll(FUNCTION_PATTERN.pattern(), result);
+                expandExpression();
             }
             String argument = getArgument();
             String[] subjects = argument.split(",");
             return gpa(Arrays.asList(subjects));
         }
 
+    }
+
+    private void expandExpression() {
+        Matcher matcher = FUNCTION_PATTERN.matcher(expression);
+        matcher.find();
+        int start = matcher.start();
+        int end = matcher.end();
+        String insideFunction = expression.substring(start,end-1);
+        Function function = FunctionFactory.getFunction(insideFunction, parameters);
+        String result = function.calculate();
+        expression = expression.replaceAll(FUNCTION_PATTERN.pattern(), result);
     }
 
     private String getArgument() {

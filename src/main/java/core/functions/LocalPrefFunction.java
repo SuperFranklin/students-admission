@@ -11,6 +11,9 @@ public class LocalPrefFunction implements Function {
         this.parameters.putAll(parameters);
     }
 
+    /**
+     * @return value of LOCAL_PREF parameter
+     */
     @Override
     public String calculate() {
         return parameters.get("LOCAL_PREF");

@@ -18,7 +18,10 @@ public class GFunction implements Function {
         this.parameters.putAll(parameters);
     }
 
-    @Override
+
+    /**
+     * @return grade of argument
+     */
     public String calculate() {
         int numberOfFunctions = FunctionUtils.numOfFunctions(expression);
         if(numberOfFunctions==1) {
@@ -26,11 +29,16 @@ public class GFunction implements Function {
             int grade = getGrade(argument);
             //zwraca numeryczną wartość oceny jako String!
             return String.valueOf(grade);
+        }else {
+            //jeżeli są 2 funkcje, oblicz wartość funkcji wewnętrznej
+            Function function = getInternalFunction();
+            return function.calculate();
         }
-        String insideFunctionExp = expression.substring(2, expression.length()).split("]")[0];
-        Function function = FunctionFactory.getFunction(insideFunctionExp, parameters);
+    }
 
-        return function.calculate();
+    private Function getInternalFunction() {
+        String insideFunctionExp = expression.substring(2, expression.length()).split("]")[0];
+        return FunctionFactory.getFunction(insideFunctionExp, parameters);
     }
 
     private int getGrade(String argument) {

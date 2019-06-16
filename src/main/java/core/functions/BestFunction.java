@@ -1,6 +1,7 @@
 package core.functions;
 
 import core.utils.GradeUtils;
+import org.jetbrains.annotations.NotNull;
 
 import java.util.Arrays;
 import java.util.HashMap;
@@ -17,15 +18,23 @@ public class BestFunction implements Function {
         this.parameters.putAll(parameters);
     }
 
+    /**
+     * @return best grade from subjects
+     */
     @Override
     public String calculate() {
-        String methodParameters = expression.split("\\[")[1];
-        String[] split = methodParameters.split(",");
+        String[] split = getArguments();
         Integer best = Arrays.stream(split).
                 map(parameters::get).
                 map(GradeUtils::toNumber).
                 max(Integer::compareTo).
                 get();
         return Integer.toString(best);
+    }
+
+    @NotNull
+    private String[] getArguments() {
+        String methodParameters = expression.split("\\[")[1];
+        return methodParameters.split(",");
     }
 }

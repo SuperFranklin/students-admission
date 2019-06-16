@@ -2,20 +2,28 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="69fdcd23-9ebb-421a-b5f7-7c61ad1a86e7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/core/parsers/SubjectParser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/core/facade/StudentAdmissionCalculatorFacadeImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/core/facade/StudentAdmissionCalculatorFacadeImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/core/functions/Best2Function.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/core/functions/Best2Function.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/core/functions/BestFunction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/core/functions/BestFunction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/core/functions/CountAFunction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/core/functions/CountAFunction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/core/functions/CountBFunction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/core/functions/CountBFunction.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/core/functions/CountCFunction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/core/functions/CountCFunction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/core/functions/CountDFunction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/core/functions/CountDFunction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/core/functions/GFunction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/core/functions/GFunction.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/core/functions/GPAFunction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/core/functions/GPAFunction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/core/parsers/ExpressionParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/core/parsers/ExpressionParser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/core/utils/CharUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/core/utils/CharUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/core/utils/GradeUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/core/utils/GradeUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/StudentAdmissionCalculatorFacadeTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/StudentAdmissionCalculatorFacadeTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/core/functions/LocalPrefFunction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/core/functions/LocalPrefFunction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/core/functions/StatPFUnction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/core/functions/StatPFUnction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/core/functions/WAVGFunction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/core/functions/WAVGFunction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/core/functions/WorstFunction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/core/functions/WorstFunction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/core/parsers/SubjectParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/core/parsers/SubjectParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/core/facade/StudentAdmissionCalculatorFacadeImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/core/facade/StudentAdmissionCalculatorFacadeImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/core/functions/BestFunction.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/core/functions/BestFunction.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/core/functions/CountCFunction.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/core/functions/CountCFunction.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/core/functions/FunctionFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/core/functions/FunctionFactory.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/core/parsers/ExpressionParser.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/core/parsers/ExpressionParser.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/core/utils/CharUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/core/utils/CharUtils.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/StudentAdmissionCalculatorFacadeTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/StudentAdmissionCalculatorFacadeTests.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/core/functions/GFunction.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/core/functions/GFunction.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/core/functions/GPAFunction.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/core/functions/GPAFunction.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/core/functions/StatPFUnction.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/core/functions/StatPFUnction.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/core/functions/WorstFunction.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/core/functions/WorstFunction.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/core/utils/GradeUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/core/utils/GradeUtils.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -236,7 +244,7 @@
       <workItem from="1560547740825" duration="322000" />
       <workItem from="1560578731891" duration="18591000" />
       <workItem from="1560625759605" duration="8665000" />
-      <workItem from="1560665782868" duration="7301000" />
+      <workItem from="1560665782868" duration="8755000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1560471616169</created>
@@ -315,7 +323,14 @@
       <option name="project" value="LOCAL" />
       <updated>1560668428410</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="another fixes, added test of execution all functions">
+      <created>1560676640582</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1560676640582</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -345,7 +360,8 @@
     <MESSAGE value="fixed bug with copying reference to properties" />
     <MESSAGE value="added implementation of BEST_2 function" />
     <MESSAGE value="another fixes, count_a function implementation, added test of execution all functions" />
-    <option name="LAST_COMMIT_MESSAGE" value="another fixes, count_a function implementation, added test of execution all functions" />
+    <MESSAGE value="another fixes, added test of execution all functions" />
+    <option name="LAST_COMMIT_MESSAGE" value="another fixes, added test of execution all functions" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -13,6 +13,9 @@ public class StatPFUnction implements Function {
         this.parameters.putAll(parameters);
     }
 
+    /**
+     * @return return TS parameter value
+     */
     @Override
     public String calculate()
     {

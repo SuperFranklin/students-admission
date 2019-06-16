@@ -18,6 +18,9 @@ public class WAVGFunction implements Function {
         this.parameters.putAll(parameters);
     }
 
+    /**
+     * @return weighted average
+     */
     @Override
     public String calculate() {
         expression = expression.replaceAll("W_AVG\\[", "");

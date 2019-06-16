@@ -5,7 +5,7 @@ import java.util.Map;
 import java.util.Set;
 
 public class SubjectParser {
-    public static Set<String> subjects(Map<String,String> params){
+    public static String[] subjects(Map<String,String> params){
         Set<String> keys = params.keySet();
         if(keys.contains("LOCAL_PREF")){
             keys.remove("LOCAL_PREF");
@@ -14,6 +14,6 @@ public class SubjectParser {
             keys.remove("TS");
         }
 
-        return keys;
+        return keys.toArray(new String[keys.size()]);
     }
 }

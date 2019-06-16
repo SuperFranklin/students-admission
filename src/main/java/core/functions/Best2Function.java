@@ -1,6 +1,7 @@
 package core.functions;
 
 import core.utils.GradeUtils;
+import org.jetbrains.annotations.NotNull;
 
 import java.util.*;
 import java.util.stream.Collectors;
@@ -14,11 +15,12 @@ public class Best2Function implements Function {
         this.parameters.putAll(parameters);
     }
 
+    /**
+     * @return best two grades splitted by delimeter
+     */
     @Override
     public String calculate() {
-
-        String methodParameters = expression.split("\\[")[1];
-        String[] split = methodParameters.split(",");
+        String[] split = getArguments();
         List<Integer> descGrades = Arrays.stream(split).
                 map(parameters::get).
                 map(GradeUtils::toNumber).
@@ -26,5 +28,10 @@ public class Best2Function implements Function {
                 collect(Collectors.toList());
         int length = descGrades.size();
         return descGrades.get(length - 1) + "," + descGrades.get(length -2);
+    }
+
+    private String[] getArguments() {
+        String methodParameters = expression.split("\\[")[1];
+        return methodParameters.split(",");
     }
 }

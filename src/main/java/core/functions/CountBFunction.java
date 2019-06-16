@@ -22,18 +22,15 @@ public class CountBFunction implements Function {
         this.parameters.putAll(parameters);
     }
 
+    /**
+     * @return number of A,B grades
+     */
     @Override
     public String calculate() {
 
         if (FunctionUtils.numOfFunctions(expression) > 1) {
-            Matcher matcher = FUNCTION_PATTERN.matcher(expression);
-            matcher.find();
-            int start = matcher.start();
-            int end = matcher.end();
-            String insideFunction = expression.substring(start,end-1);
-            Function function = FunctionFactory.getFunction(insideFunction, parameters);
-            String result = function.calculate();
-            expression = expression.replaceAll(FUNCTION_PATTERN.pattern(), result);
+            //oblicza wewnętrzne funkcje i wyniki wstawia do wyrażenia
+            expandExpression();
         }
         String argument = getArgument();
         String[] subjects = argument.split(",");
@@ -45,6 +42,17 @@ public class CountBFunction implements Function {
 
         return Long.toString(count);
 
+    }
+
+    private void expandExpression() {
+        Matcher matcher = FUNCTION_PATTERN.matcher(expression);
+        matcher.find();
+        int start = matcher.start();
+        int end = matcher.end();
+        String insideFunction = expression.substring(start,end-1);
+        Function function = FunctionFactory.getFunction(insideFunction, parameters);
+        String result = function.calculate();
+        expression = expression.replaceAll(FUNCTION_PATTERN.pattern(), result);
     }
 
     private String grade(String arg){
@@ -60,7 +68,4 @@ public class CountBFunction implements Function {
         return argument;
     }
 
-    private boolean hasFunctionInside(String argument) {
-        return argument.contains("[");
-    }
 }

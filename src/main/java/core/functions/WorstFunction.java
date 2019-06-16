@@ -1,5 +1,6 @@
 package core.functions;
 
+import core.parsers.SubjectParser;
 import core.utils.GradeUtils;
 
 import java.util.HashMap;
@@ -17,12 +18,15 @@ public class WorstFunction implements Function {
         }
     }
 
+    /**
+     * @return worst grade of argument subjects
+     */
     @Override
     public String calculate() {
         int worst = 4;
         String[] subjects;
         if(expression.equals("WORST[all")){
-            subjects = parameters.keySet().toArray(new String[0]);
+            subjects = SubjectParser.subjects(parameters);
         }else {
             String methodParameters = expression.split("\\[")[1];
             subjects = methodParameters.split(",");

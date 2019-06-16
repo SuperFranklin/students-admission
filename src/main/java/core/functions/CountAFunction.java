@@ -22,29 +22,37 @@ public class CountAFunction implements Function {
         this.parameters.putAll(parameters);
     }
 
+    /**
+     * @return number of A grades
+     */
     @Override
     public String calculate() {
 
         if (FunctionUtils.numOfFunctions(expression) > 1) {
-            Matcher matcher = FUNCTION_PATTERN.matcher(expression);
-            matcher.find();
-            int start = matcher.start();
-            int end = matcher.end();
-            String insideFunction = expression.substring(start,end-1);
-            Function function = FunctionFactory.getFunction(insideFunction, parameters);
-            String result = function.calculate();
-            expression = expression.replaceAll(FUNCTION_PATTERN.pattern(), result);
+            //oblicza wewnętrzne funkcje i wyniki wstawia do wyrażenia
+            expandExpression();
         }
         String argument = getArgument();
         String[] subjects = argument.split(",");
         long count = Arrays.stream(subjects)
                 .map(this::grade)
                 .map(GradeUtils::toNumber)
-                .filter(grade -> grade >= 3)
+                .filter(grade -> grade >= 4)
                 .count();
 
         return Long.toString(count);
 
+    }
+
+    private void expandExpression() {
+        Matcher matcher = FUNCTION_PATTERN.matcher(expression);
+        matcher.find();
+        int start = matcher.start();
+        int end = matcher.end();
+        String insideFunction = expression.substring(start,end-1);
+        Function function = FunctionFactory.getFunction(insideFunction, parameters);
+        String result = function.calculate();
+        expression = expression.replaceAll(FUNCTION_PATTERN.pattern(), result);
     }
 
     private String grade(String arg){
