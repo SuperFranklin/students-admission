@@ -18,6 +18,7 @@
                 </configuration>
             </plugin>
         </plugins>
+        <finalName>expressions-library</finalName>
     </build>
 
     <dependencies>
