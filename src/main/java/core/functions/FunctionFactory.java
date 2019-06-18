@@ -18,6 +18,9 @@ public class FunctionFactory {
         if(functionExp.equals("G")){
             return new GFunction(expression,parameters);
         }
+        if(functionExp.equals("R")){
+            return new RFunction(expression,parameters);
+        }
         if(functionExp.equals("STAT_P")){
             return new StatPFUnction(parameters);
         }
