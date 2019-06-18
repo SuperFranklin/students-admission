@@ -19,7 +19,7 @@ public class StatPFUnction implements Function {
     @Override
     public String calculate()
     {
-        String textGrade = parameters.get("TS");
+        String textGrade = parameters.getOrDefault("TS","0");
         int numberGrade = GradeUtils.toNumber(textGrade);
 
         //returns number grade as String

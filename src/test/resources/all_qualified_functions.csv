@@ -1,172 +1,268 @@
-(GPA[all]>=2.0)
-(GPA[all]>=2.0)
-(GPA[all]>=2.0)
-GPA[all]>2.5
-GPA[all]>=2.0
-GPA[all]>=2.4
-GPA[all]>2.5
-GPA[all]>1.5
-GPA[all]>2.0
-G[WORST[all]]>=C
-G[WORST[all]]>=C
-GPA[all]>=1.76 & G[BEST[LL,AE]]>=C & G[BEST[AM,GM]]>=C & G[BEST[Hi,Ec,AC,BS]]>=D
-GPA[all]>=1.76 & G[BEST[LL,AE]]>=C & G[BEST[AM,GM]]>=C & G[BEST[Hi,Ec,AC,BS]]>=D
-GPA[all]>=1.76 & G[BEST[LL,AE]]>=C & G[BEST[AM,GM]]>=C & G[BEST[Hi,Ec,AC,BS]]>=D
-GPA[all]>=1.76 & G[BEST[LL,AE]]>=C & G[BEST[AM,GM]]>=C & G[BEST[Hi,Ec,AC,BS]]>=D
-GPA[all]>=1.76 & G[BEST[LL,AE]]>=C & G[BEST[AM,GM]]>=C & G[BEST[Hi,Ec,AC,BS]]>=D
 (G[WORST[LL,AM,Ph,AS,Ch,Bi]]>=C)
-((COUNT_B[LL,BEST[ICT,Gr,Hi,BS,LS,AC,Ec]]>=3))&(G[GM]>=B)|(G[AM]>=C)&STAT_P[TS]>0
-(COUNT_B[Ph,AM]=2)&(COUNT_B[LL,Ch]=2)&(STAT_P[TS]>0)
-(((G[LL]>=B)&((COUNT_C[GM,Gr,Ec,BS,LS,Hi]>=4)|(G[AM]>=C))))&STAT_P[TS]>0
-((COUNT_B[LL,Ph,AM]>=3)) & STAT_P[TS] > 0
-((COUNT_B[LL,AE,AM,GM,Ph]>=3))&STAT_P[TS]>50
-(COUNT_B[AM,Ph,LL]>=3) & (G[BEST[Ch,Bi,GI,Gr,IT]]>=B)&STAT_P[TS]>=60
-(COUNT_B[AM,Ph,LL]>=3) & (G[BEST[Ch,GI,Gr,IT]]>=B)&STAT_P[TS]>0
+(G[WORST[LL,AM,Ph,AS,Ch,Bi]]>=C)
+((G[AM]>=C)|(G[GM]>=B))&(G[LL]>=B)&(G[Ec]>=C)&(COUNT_C[Hi,Gr,LS,BS,Ac]>=2)&STAT_P[TS]>0
+(COUNT_B[Ph,AM]=2)&(COUNT_B[LL,AE,Ch]=2)&(STAT_P[TS]>0)
+(((G[LL]>=B)&((COUNT_C[GM,Gr,Ec,Ac,BS,LS,Hi]>=4)|(G[AM]>=C))))&STAT_P[TS]>0
+((COUNT_B[LL,AE,Ph,AM]>=3)) & STAT_P[TS] > 0
+((COUNT_B[LL,AE,AM,GM,Ph]>=3))&STAT_P[TS]>0
+(COUNT_B[AM,LL,AE]=2)&(G[Ph]>=C)&(G[BEST[Ch,Bi,Gl,Gr,IT]]>=B)&STAT_P[TS]>0
+(COUNT_B[AM,Ph,LL,AE]>=3) & (G[BEST[Ch,Gl,Gr,IT]]>=B)&STAT_P[TS]>0
 (COUNT_D[LL,AE]=1)&((G[AM]>=D)|(G[GM]>=D))&(G[Bi]>=D)&(COUNT_D[Ch,Ph]>=1)&(STAT_P[TS]>0)
-((COUNT_A[Ph,AM]>=1)&(COUNT_B[Ph,AM,LL,CH]>=3))&STAT_P[TS]>0
+((COUNT_A[Ph,AM]>=1)&(COUNT_B[Ph,AM,LL,AE,Ch]>=3))&STAT_P[TS]>0
 (G[WORST[all]]>= C)
-(G[WORST[all]]>=C)&(COUNT_C[all]>=1)
-(G[WORST[all]]>=C)&(GPA[all]>=2.25) 
-(G[WORST[all]]>=C)&GPA[all]>2.2
-(((G[LL]>=C)&((G[AM]>=C)|(G[GM]>=B)))&(COUNT_B[Bi,Ch,ph]>=2))
+(G[WORST[all]]>= C)
+(G[WORST[all]]>=C)&(GPA[all]>=2)
+(G[WORST[all]]>=C)&(GPA[all]>=2)
+(G[WORST[all]]>=C)&(GPA[all]>=2)
+(G[WORST[all]]>=C)&(GPA[all]>=2)
+(G[WORST[all]]>=C)&(GPA[all]>=2)
+(G[WORST[all]]>=C)&(GPA[all]>=2)
+(G[WORST[all]]>=C)&GPA[all]>2
+(G[WORST[all]]>=C)&GPA[all]>2
+(((G[LL]>=C)&((G[AM]>=C)|(G[GM]>=B)))&(COUNT_C[Bi,Ch,Ph]>=2)&(COUNT_B[Bi,Ch,Ph]>=1))
+(((G[LL]>=C)&((G[AM]>=C)|(G[GM]>=B)))&(COUNT_C[Bi,Ch,Ph]>=2)&(COUNT_B[Bi,Ch,Ph]>=1))
+(((G[LL]>=C)&((G[AM]>=C)|(G[GM]>=B)))&(COUNT_C[Bi,Ch,Ph]>=2)&(COUNT_B[Bi,Ch,Ph]>=1))
+(((G[LL]>=C)&((G[AM]>=C)|(G[GM]>=B)))&(COUNT_C[Bi,Ch,Ph]>=2)&(COUNT_B[Bi,Ch,Ph]>=1))
+(((G[LL]>=C)&((G[AM]>=C)|(G[GM]>=B)))&(COUNT_C[Bi,Ch,Ph]>=2)&(COUNT_B[Bi,Ch,Ph]>=1))
 (G[WORST[all]]>=C)
 (G[WORST[all]]>=C)
-(G[WORST[LL,GM,BS,Ge,IT,Hi,Ac]]>=C)
-(G[WORST[AE,GM,Ch,Bi,Ph]]>=C)
-(G[WORST[all]]>=C)
-(G[WORST[all]]>=C)
-(G[WORST[all]]>=C)
-(((G[LL]>=B)|(G[AE]>=B)&((G[GM]>=B)|(G[AM]>=B)))&(GPA[BEST_2[Ec,Ge,Hi,Ph,Ch,Bi,Geo,BS,Ac,LS,ICT]]>=3.25))
-(((G[LL]>=C)&((G[GM]>=B)|(G[AM]>=B)))&(GPA[BEST_2[Ec,Ge,Hi,Ph,Ch,Bi]]>=2.75))
-(((G[LL]>=B)|(G[AE]>B)&((G[GM]>=C)|(G[AM]>=B)))&(GPA[BEST_2[Ec,Ge,Hi,Ph,Ch,Bi,Geo,Acc,BS,LS,ICT]]>=2.5))
-(((G[LL]>=B)&((G[GM]>=B)|(G[AM]>=C)))&(GPA[BEST_2[LS,Acc,BS,Ec,Ge,Hi,Ph,Ch,Bi]]>=2.75))
-(((G[LL]>=B)|(G[AE]>B)&((G[GM]>=C)|(G[AM]>=B)))&(GPA[BEST_2[Ec,Ge,Hi,Ph,Ch,Bi,Geo,Acc,BS,LS,ICT]]>=2.5))
-(((G[LL]>=B)|(G[AE]>B)&((G[GM]>=C)|(G[AM]>=B)))&(GPA[BEST_2[Ec,Ge,Hi,Ph,Ch,Bi,Geo,Acc,BS,LS,ICT]]>=2.75))
-((G[LL]>=B)&((G[GM]>=B)|(G[AM]>=B))&(GPA[BEST_2[Ec,Gc,Hi,Ph,Ch,Bi]]>=3))
-(((G[LL]>=C)&((G[GM]>=B)|(G[AM]>=B)))&(GPA[BEST_2[Ec,Ge,Hi,Ph,Ch,Bi]]>=2.75))
-(((G[LL]>C)|(G[AE]>C)&((G[GM]>=B)|(G[AM]>=B)))&(GPA[BEST_2[Ec,Ge,Hi,Ph,Ch,Bi,Geo,BS,Ac,LS,ICT]]>3.50))
-(G[WORST[all]]>=C)
-(G[WORST[LL,GM,IT,BS,Ec,Ac]]>=B)
-((G[WORST[all]]>=C) &(GPA[all]>=2.0))
-(GPA[all]>=2.25)
+COUNT_C[GM,AM,AS,Ch,LL,AE,Bi]>=4
+COUNT_C[GM,AM,AS,Ch,LL,AE,Bi]>=4
+(G[WORST[LL,GM,BS,Gr,IT,Hi,Ac]]>=2)
+(G[WORST[LL,GM,BS,Gr,IT,Hi,Ac]]>=2)
+(G[WORST[AE,GM,Ch,Bi,Ph]]>=2)
+(GPA[all]>=2.5)&(G[LL]>=B)&(G[GM]>=B)|(G[AM]>=C)&(G[WORST[Gr,Hi,Ec,IT,BS,Ac]]>=C)
+(COUNT_B[AM,Ph]=2)&(COUNT_C[LL,AE,AS,Ch,Bi]>=3)
+(COUNT_B[AM,Ph]=2)&(COUNT_C[LL,AE,AS,Ch,Bi]>=3)
+(COUNT_C[LL,AE]=1)&(COUNT_B[GM,AM]=1)&((COUNT_B[Ec,Hi,Gr]>=2)|(COUNT_B[Ph,Ch,Bi]>=2))&(GPA[LL, AE, AM, GM, Ec, Hi, Gr, Bi, Ch, Ph]>=2.75)
+(COUNT_C[LL,AE]=1)&(COUNT_B[GM,AM]=1)&((COUNT_B[Ec,Hi,Gr]>=2)|(COUNT_B[Ph,Ch,Bi]>=2))&(GPA[LL, AE, AM, GM, Ec, Hi, Gr, Bi, Ch, Ph]>=2.75)
+(COUNT_C[LL,AE]=1)&(COUNT_C[GM,AM]=1)&((COUNT_C[Ec,Hi,Gr]>=2)|(COUNT_C[Ph,Ch,Bi]>=2))&(GPA[LL, AE, AM, GM, Ec, Hi, Gr, Bi, Ch, Ph]>=2.25)
+(COUNT_C[LL,AE]=1)&(COUNT_C[GM,AM]=1)&((COUNT_B[Ec,Hi,Gr]>=2)|(COUNT_B[Ph,Ch,Bi]>=2))&(GPA[LL, AE, AM, GM, Ec, Hi, Gr, Bi, Ch, Ph]>=2.50)
+(COUNT_C[LL,AE]=1)&(COUNT_B[GM,AM]=1)&((COUNT_B[Ec,Hi,Gr]>=2)|(COUNT_B[Ph,Ch,Bi]>=2))&(GPA[LL, AE, AM, GM, Ec, Hi, Gr, Bi, Ch, Ph]>=2.75)
+(COUNT_C[LL,AE]=1)&(COUNT_B[GM,AM]=1)&((COUNT_B[Ec,Hi,Gr]>=2)|(COUNT_B[Ph,Ch,Bi]>=2))&(GPA[LL, AE, AM, GM, Ec, Hi, Gr, Bi, Ch, Ph]>=2.75)
+(COUNT_C[LL,AE]=1)&(COUNT_B[GM,AM]=1)&((COUNT_B[Ec,Hi,Gr]>=2)|(COUNT_B[Ph,Ch,Bi]>=2))&(GPA[LL, AE, AM, GM, Ec, Hi, Gr, Bi, Ch, Ph]>=2.75)
+(COUNT_C[LL,AE]=1)&(COUNT_B[GM,AM]=1)&((COUNT_B[Ec,Hi,Gr]>=2)|(COUNT_B[Ph,Ch,Bi]>=2))&(GPA[LL, AE, AM, GM, Ec, Hi, Gr, Bi, Ch, Ph]>=2.5)
+(COUNT_C[LL,AE]=1)&(COUNT_B[GM,AM]=1)&((COUNT_B[Ec,Hi,Gr]>=2)|(COUNT_B[Ph,Ch,Bi]>=2))&(GPA[LL, AE, AM, GM, Ec, Hi, Gr, Bi, Ch, Ph]>=2.75)
+(G[WORST[LL,GM,IT,BS,Ec,Ac]]>=2)
+(G[WORST[LL,GM,IT,BS,Ec,Ac]]>=2)
+(G[WORST[LL,GM,IT,BS,Ec,Ac]]>=2)
+((G[WORST[all]]>=C) &(GPA[all]>=2.5))
+((G[WORST[all]]>=C) &(GPA[all]>=2.5))
+(GPA[all]>=2.5)&((G[GM]>=B)|(G[LL]>=B)|(G[Ec]>=C)|(G[Ac]>=C)|(G[BS]>=C))
 ((G[WORST[all]]>=D)&(G[Ph]>=C)&(G[AM]>=C))
 (G[WORST[LL,AM,Ch,AS,IT]]>=C)
-(((COUNT_C[LL,AM,GM]>=2)&(G[BEST[Bi,Ag]]>=C))&(G[BEST[Ph,Ch]]>=D)&(GPA[all]>=2.25))
-(G[WORST[LL,Ph,AM,Ch,IT]]>=C)
-(G[WORST[ LL,AM,Ph,Ch,Ge,IT]]>=C)
-(G[WORST[AE,AM,Ph,LL]]>=B)
-(G[WORST[all]]>=C)&(GPA[ALL]>=2.0)
-(G[WORST[all]]>=C)&(GPA[ALL]>=2.0)
-(G[WORST[all]]>=C)&(GPA[ALL]>=2.0)
-G[WORST[all]]>=C
+(G[WORST[LL,AM,Ch,AS,IT]]>=C)
+(G[WORST[LL,AM,Ch,AS,IT]]>=C)
+(((COUNT_C[LL,AM,GM]>=2)&(G[Bi]>=C))&(G[BEST[Ph,Ch]]>=B)&(GPA[all]>=2.5))
+(((COUNT_C[LL,AM,GM]>=2)&(G[Bi]>=C))&(G[BEST[Ph,Ch]]>=B)&(GPA[all]>=2.5))
+(G[WORST[LL,Ph,AM,Ch,IT]]>=2)
+(G[WORST[LL,Ph,AM,Ch,IT]]>=2)
+(G[WORST[LL,Ph,AM,Ch,IT]]>=2)
+(G[WORST[ LL,AM,Ph,Ch,Gr, IT]]>=C)
+(G[WORST[ LL,AM,Ph,Ch,Gr, IT]]>=C)
+(G[WORST[ LL,AM,Ph,Ch,Gr, IT]]>=C)
+(G[WORST[AE,AM,Ph,LL]]>=2)
+(G[WORST[AE,AM,Ph,LL]]>=2)
+(G[WORST[AE,AM,Ph,LL]]>=2)
+(G[WORST[all]]>=D)&(G[LL]>=C)
+(G[WORST[all]]>=D)&(G[LL]>=C)
+(G[WORST[all]]>=D)&(G[LL]>=C)
+(G[WORST[all]]>=D)&(G[LL]>=C)
+(G[WORST[all]]>=D)&(G[LL]>=C)
+(G[WORST[all]]>=D)&(G[LL]>=C)
+COUNT_C[GM,AM,AS,Ch,LL,AE,IT]>=4
+COUNT_C[GM,AM,AS,Ch,LL,AE,IT]>=4
 ((G[GM]>=C)|(G[AM]>D))&((G[LL]>=C)|(G[AE]>D))&(G[Ec]>D)&(COUNT_C[IT,Ac,BS]>0)&(STAT_P[TS]>0)
 (COUNT_B[LL,AM,GM,Ch,Ph,Bi]>=2)&(COUNT_C[LL,AM,GM,Ch,Ph,Bi]>=2)
-(((COUNT_C[LL,GM,AM]=2)&(G[BEST[Bi,Ag]]>=C))&(G[BEST[Ph,Ch,Ge]]>=C))
-(G[WORST[LL,AM,Ph,Ch,AS,IT]]>=C)
+(((COUNT_C[LL,GM,AM]=2)&(G[Bi]>=B))&(G[BEST[Ph,Ch]]>=B)&(GPA[all]>=2.5))
+(((COUNT_C[LL,GM,AM]=2)&(G[Bi]>=B))&(G[BEST[Ph,Ch]]>=B)&(GPA[all]>=2.5))
+(G[WORST[LL,AM,Ph,Ch,AS,IT]]>=2)
+(G[WORST[LL,AM,Ph,Ch,AS,IT]]>=2)
+(G[WORST[LL,AM,Ph,Ch,AS,IT]]>=2)
+(COUNT_B[LL,AM,GM,Ch,Bi]>=3)
+(COUNT_B[LL,AM,GM,Ch,Bi]>=3)
+(COUNT_B[LL,AM,GM,Ch,Bi]>=3)
 (COUNT_B[LL,AM,GM,Ch,Bi]>=3)
 (COUNT_B[LL,AM,GM,Ch,Bi]>=2)&(COUNT_C[LL,AM,GM,Ch,Bi]>=2)
-(GPA[all]>=2.4)
-(COUNT_C[LL,AM,GM,Hi,Gr,Ch,Ph,Bi]>=4)&(COUNT_B[LL,AM,GM,Hi,Gr,Ch,Ph,Bi]>=2)
-(COUNT_C[LL,AM,GM,Hi,Gr,Ch,Ph,Bi]>=4)
+(COUNT_B[LL,AM,GM,Ch,Bi]>=2)&(COUNT_C[LL,AM,GM,Ch,Bi]>=2)
+(GPA[LL,GM,AM,Ch,Bi]>=2.5)
+(GPA[LL,GM,AM,Ch,Bi]>=2.5)
+(GPA[LL,GM,AM,Ch,Bi]>=2.5)
+COUNT_A[AM,GM]>2
+(COUNT_C[LL,AM,GM,Ch,Bi]>=2)
+(COUNT_C[LL,AM,GM,Ch,Bi]>=2)
 (((COUNT_C[LL,AE]>=1)&(COUNT_B[Bi]>=1)&(COUNT_C[AM,GM]>=1)&(COUNT_C[Ch,Ph]>=1)))&(STAT_P[TS]>0)
 (G[WORST[all]]>=C)
-((G[GM]>=B)|(G[AM]>=C))&(COUNT_B[LL,AC,Ec,BS]>=4)
-(COUNT_B[GM,Hi,Ge,Ec]>=B)&(G[LL]>=B)&(GPA[WORST[all]]>=2.6)
-(COUNT_C[LL,AM,GM,Hi,Ec]>=3)
-((G[BEST[AE,LL]]>=B)&(G[BEST[GM,AM]]>=B))&(G[WORST[Ge,Hi,Ec,Ph,Ch,Bi]]>=B)
-(GPA[BEST[LL,AE],AM,Bi,Ch,Ph]>=3.00)&(COUNT_B[BEST[LL,AE],AM]=2)&(COUNT_B[Bi,Ch,Ph]=3)
-(((G[LL]>=B)|(G[AE]>B)&((G[GM]>=C)|(G[AM]>=B)))&(GPA[BEST_2[Ec,Ge,Hi,Ph,Ch,Bi,Geo,Acc,BS,LS,ICT]]>=2.75))
-((COUNT_A[AM,Ph]>=2)&(COUNT_B[LL,AE,Ch]>=2))&STAT_P[TS]>0
-((((G[AM]>=A)&(G[Ph]>=A))&(((G[LL]>=C)|(G[AE]>=B))&(G[Ch]>=B))))&STAT_P[TS]>0
-(COUNT_D[LL,AE,GM,AM,Bi,Ch,Ph,AS,Ge,Gl,BS,Ec]>=4)
-(((G[LL]>=B)|(G[AE]>B)&((G[GM]>=B)|(G[AM]>=B)))&(GPA[BEST_2[Ec,Ge,Hi,Ph,Ch,Bi,Geo,Acc,BS,LS,ICT]]>=2.75))
-(((G[LL]>=C)&((G[AM]>=C)|(G[GM]>=B)))&(COUNT_B[BS,Ec,Ac,LS,IT]>=2))
-(((G[LL]>=C)&((G[AM]>=C)|(G[GM]>=B)))&(COUNT_B[BS,Ec,Ac,LS,IT]>=2))
-(((G[LL]>=B)&((G[AM]>=B)|(G[GM]>=B)))&(COUNT_B[BS,Ec,Ac,LS,IT]>=2))
-(((G[LL]>=C)&((G[AM]>=C)|(G[GM]>=B)))&(COUNT_B[BS,Ec,Ac,IT]>=2))
-((G[LL]>=C)|(COUNT_C [GM,Ge,Hi]>=2))
-(((G[LL]>=C)&((G[AM]>=C)|(G[GM]>=B)))&(COUNT_B[Bi,Ch,Ph]>=2))
-(((G[LL]>=B)&((G[AM]>=B)))&(COUNT_B[Bi,Ch,Ph]>=2))
+((G[AM]>=C)|(G[GM]>=B))&(G[LL]>=B)&(COUNT_B[Ac,Ec,BS]>=2)
+(GPA[all]>=2.5)&(G[LL]=A)
+(COUNT_B[LL,AM,GM,Hi,Ec]>=3)
+(COUNT_B[LL,AE]=1)&(COUNT_B[GM,AM]=1)&(GPA[LL,AE,AM,GM,Ec,Hi,Gr,Bi,Ch,Ph] >=3)&((COUNT_B[Ec,Gr,Hi]>=2)|(COUNT_B[Ph,Ch,Bi]>=2))
+(COUNT_B[LL,AE]=1)&(COUNT_B[AM]=1)&(COUNT_B[Ph,Ch,Bi]=3)&(GPA[LL, AE, AM, Ph, Ch, Bi]>=3)
+(COUNT_C[LL,AE]=1)&(COUNT_B[GM,AM]=1)&((COUNT_B[Ec,Hi,Gr]>=2)|(COUNT_B[Ph,Ch,Bi]>=2))&(GPA[LL, AE, AM, GM, Ec, Hi, Gr, Bi, Ch, Ph]>=2.75)
+((COUNT_B[AM,Ph]>=2)&(COUNT_B[LL,AE,Ch]>=2))&STAT_P[TS]>0
+((((G[AM]>=A)&(G[Ph]>=A))&(((G[LL]>=B)|(G[AE]>=B))&(G[Ch]>=C))))&STAT_P[TS]>0
+GPA[all]>1.6
+(COUNT_C[LL,AE]=1)&(COUNT_B[GM,AM]=1)&((COUNT_B[Ec,Hi,Gr]>=2)|(COUNT_B[Ph,Ch,Bi]>=2))&(GPA[LL, AE, AM, GM, Ec, Hi, Gr, Bi, Ch, Ph]>=2.75)
+(((G[LL]>=B)&((G[AM]>=C)|(G[GM]>=B)))&(COUNT_B[BS,Ec,Ac,LS,IT]>=2))
+(((G[LL]>=B)&((G[AM]>=C)|(G[GM]>=B)))&(COUNT_B[BS,Ec,Ac,LS,IT]>=2))
+(((G[LL]>=B)&((G[AM]>=C)|(G[GM]>=B)))&(COUNT_B[BS,Ec,Ac,LS,IT]>=2))
+(((G[LL]>=B)&((G[AM]>=C)|(G[GM]>=B)))&(COUNT_B[BS,Ec,Ac,LS,IT]>=2))
+(((G[LL]>=B)&((G[AM]>=C)|(G[GM]>=B)))&(COUNT_B[BS,Ec,Ac,IT]>=2))
+(((G[LL]>=B)&((G[AM]>=C)|(G[GM]>=B)))&(COUNT_B[BS,Ec,Ac,IT]>=2))
+(((G[LL]>=B)&((G[AM]>=C)|(G[GM]>=B)))&(COUNT_B[BS,Ec,Ac,IT]>=2))
+(((G[LL]>=B)&((G[AM]>=C)|(G[GM]>=B)))&(COUNT_B[BS,Ec,Ac,IT]>=2))
+((G[LL]>=B)&(COUNT_B [Gr,Hi]>=1))|((G[Hi]>=B)&(G[Gr]>=B))
+((G[LL]>=B)&(COUNT_B [Gr,Hi]>=1))|((G[Hi]>=B)&(G[Gr]>=B))
+((G[LL]>=B)&(COUNT_B [Gr,Hi]>=1))|((G[Hi]>=B)&(G[Gr]>=B))
+((G[LL]>=B)&(COUNT_B [Gr,Hi]>=1))|((G[Hi]>=B)&(G[Gr]>=B))
+(((G[LL]>=B)&((G[AM]>=C)|(G[GM]>=B)))&(COUNT_B[Bi,Ch,Ph]>=1))
+(((G[LL]>=B)&((G[AM]>=C)|(G[GM]>=B)))&(COUNT_B[Bi,Ch,Ph]>=1))
+(((G[LL]>=B)&((G[AM]>=C)|(G[GM]>=B)))&(COUNT_B[Bi,Ch,Ph]>=1))
+(((G[LL]>=B)&((G[AM]>=C)|(G[GM]>=B)))&(COUNT_B[Bi,Ch,Ph]>=1))
 (GPA[LL,BEST[AM,GM],Hi,Ec,LS]>=2.5)
-COUNT_B[LL,GM,Hi,Ge,Ec]>=3
-(GPA[all]>=3)&((G[LL]>c)|(G[GM]>c)|(G[Ec]>c)|(G[BS]>c)|(G[Ac]>c))
-(COUNT_B[LL]=1)&(COUNT_C[AM]=1)
-((G[WORST[LL,AM,GM, Ch, Ph, Bi]]>=B)&(G[Bi]>=E))
-((G[WORST[LL,AM, Ch, Ph, Bi]]>=B)&(G[Bi]>=E))
-(GPA[all]>=3)&((G[LL]>c)|(G[GM]>c)|(G[Bi]>c)|(G[Ch]>c)|(G[Ph]>c))
-((G[WORST[all]]>=D)&(G[Ph]>=C)&(G[AM]>=C))
-((G[LL]>=C)&(COUNT_C[AM,GM,Ch,Ph,Hi,Ge,BS,Ec]>=2))
+((G[AM]>=C)|(G[GM]>=B))&(G[LL]>=B)
+((G[AM]>=C)|(G[GM]>=B))&(G[LL]>=B)&(COUNT_C[Ec,Ac,BS]>=2)
+((G[AM]>=C)|(G[GM]>=B))&(G[LL]>=B)
+(G[LL]>=B)&(COUNT_B[AM, GM]=1)&(COUNT_B[Bi]=1)&(COUNT_C[Ch,Ph]=2)
+(G[LL]>=B)&(COUNT_B[AM, GM]=1)&(G[Bi]>=B)&(COUNT_B[Ph,Ch]>=1)
+((G[AM]>=C)|(G[GM]>=B))&(G[LL]>=B)&(G[Bi]>=B)&(COUNT_B[Ch, Ph]>=1)
+((G[WORST[all]]>=D)&(G[Ph]>=C)&(G[AM]>=C)&(G[LL]>=C))
+((G[LL]>=B)&(COUNT_B[AM,GM,Ch,Ph,Hi,Gr,BS,Ec]>=1))
+((G[LL]>=B)&(COUNT_B[AM,GM,Ch,Ph,Hi,Gr,BS,Ec]>=1))
+((G[LL]>=B)&(COUNT_B[AM,GM,Ch,Ph,Hi,Gr,BS,Ec]>=1))
+((G[LL]>=B)&(COUNT_B[AM,GM,Ch,Ph,Hi,Gr,BS,Ec]>=1))
 COUNT_B[LL,AM,Ph]>=3
 (((((G[AM]>=A)&(G[Ph]>=A))&(G[LL]>=B)|(G[AE]>=B))&(G[Ch]>=B)))&STAT_P[TS]>0
-((COUNT_A[Ch,Ph,AM]>=1)&(COUNT_B[Ch,AM,Ph,LL]>=3))&STAT_P[TS]>0
-(((G[LL]>=B)|(G[AE]>B)&((G[GM]>=B)|(G[AM]>=B)))&(GPA[BEST_2[Ec,Ge,Hi,Ph,Ch,Bi,Geo,Acc,BS,LS,ICT]]>=2.00))
-((G[LL]>=C)&(COUNT_C[GM,Hi,Ge,BS,Ec]>=2))
-(G[WORST[all]]>=C)
-(G[WORST[all]]>=C)
-(G[WORST[all]]>=C)
-(G[WORST[all]]>=C)
-(G[WORST[all]]>=D)
-GPA[LL,AM,AS,Ph,Ch,IT]>=C
-(G[WORST[all]]>=C)
-(G[WORST[all]]>=C)&(GPA[ALL]>=2.25)
-(COUNT_C[LL,AM,GM,Hi,Gr,Ch,Ph,Bi]>=4)
-(((G[LL]>=C)&((G[GM]>=B)|(G[AM]>=C)))&(GPA[LL,BEST[GM,AM],BEST_2[Ph,Ch,Bi,Gl,Hi,Ec,BS]]>2.5))
-((G[GM]>=C)|(G[AM]>=C))&((G[AE]>=C)|(G[LL]>=C))
-((G[GM]>=C)|(G[AM]>=C))&((G[AE]>=C)|(G[LL]>=C))
-((G[WORST[all]]>=C)&(GPA[all]>2))&((G[LL]>=C)|(G[AE]>=C))&((G[GM]>=C)|(G[AM]>=C))
+((COUNT_A[Ch,Ph,AM]>=1)&(COUNT_B[Ch,AM,Ph,LL,AE]>=3))&STAT_P[TS]>0
+(COUNT_C[LL,AE]=1)&(COUNT_C[GM,AM]=1)&((COUNT_C[Ec,Hi,Gr]>=2)|(COUNT_C[Ph,Ch,Bi]>=2))&(GPA[LL, AE, AM, GM, Ec, Hi, Gr, Bi, Ch, Ph]>=2.25)
+(G[WORST[all]]>=2)&(COUNT_C[Ph,Ch,Bi]>=1)
+(G[WORST[all]]>=2)
+(G[WORST[all]]>=2)&(COUNT_C[Ph]=1)
+(GPA[WORST[all]]>=2)
+(GPA[WORST[all]]>=2)
+GPA[LL,AM,AS,Ph,Ch,IT]>=2.5
+GPA[LL,AM,AS,Ph,Ch,IT]>=2.5
+GPA[LL,AM,AS,Ph,Ch,IT]>=2.5
+(GPA[all]>=2.5)&(G[LL]>=B)&(G[GM]>=B)|(G[AM]>=C)&(G[WORST[all]]>=C)
+(GPA[all]>=2.5)&(G[LL]>=B)&(G[GM]>=B)|(G[AM]>=C)&(G[WORST[all]]>=C)
+(G[WORST[all]]>=C)&(GPA[all]>=2.50)
+(G[WORST[all]]>=C)&(GPA[all]>=2.50)
+COUNT_C[Bi,Ch,GM,AM,LL]>=2
+COUNT_C[Bi,Ch,GM,AM,LL]>=2
+(COUNT_C[LL,AE]=1)&((COUNT_B[GM]=1)|(COUNT_C[AM]=1))&(COUNT_C[Ac,Ec,BS,Gr,Hi,Ph,Ch,Bi]>=2)&(GPA[LL,AE,AM,GM,Ac,Ec,BS,Gr,Hi,Ph,Ch,Bi]>=2.5)
 (G[WORST[all]]>=C)
 ((COUNT_C[AM,GM]>=1)&(COUNT_C[LL,Bi,Ch,Ph]>=2))
-(COUNT_D[LL,AE]=1)&((G[AM]>=D)|(G[GM]>=D))&(G[Bi]>=D)&(COUNT_D[Ch,Ph]>=1)&(STAT_P[TS]>0)
-(((GPA[all]>=3.5)&(G[WORST[LL,AM,Ch,Bi]]>=B))&(COUNT_A[LL,AM,Ch,Bi]>=3))
-(COUNT_C[AM,GM,LL,Bi,Ch,Ph]>=4)&(GPA[all]>=2.25)
-((COUNT_B[Ch,AM,LL,BEST[Bi,Ph]]>=3))&STAT_P[TS]>0
-((COUNT_B[Ch,AM,LL,BEST[Bi,Ph]]>=3))&STAT_P[TS]>=0
-(((GPA[all]>=2.8)&(G[LL]>=B))&(((G[GM]>B)|(G[AM]>C))&(COUNT_B[BS,Hi,Ge,GI,Ac,Ec]>=1)))&STAT_P[TS]>0
-(((GPA[all]>=2.8)&(G[LL]>=B))&(((G[GM]>B)|(G[AM]>C))&(COUNT_B[BS,Hi,Ge,GI,Ac,Ec]>=1)))&STAT_P[TS]>0
-(((GPA[all]>=2.8)&(G[LL]>=B))&(((G[GM]>B)|(G[AM]>C))&(COUNT_B[BS,Hi,Ge,GI,Ac,Ec]>=1)))&STAT_P[TS]>0
-(((GPA[all]>=2.8)&(G[LL]>=B))&(((G[GM]>C)|(G[AM]>C))&(COUNT_B[BS,Hi,Ge,GI,Ac,Ec]>=1)))&STAT_P[TS]>0
-(((GPA[all]>=2.8)&(G[LL]>=B))&(((G[GM]>=C)|(G[AM]>=C))&(COUNT_B[BS,Hi,Ge,GI,Ac,Ec]>=1)))&STAT_P[TS]>0
-(((GPA[all]>2.8)&(G[LL]>=B))&(((G[GM]>C)|(G[AM]>=C))&(COUNT_B[BS,Hi,Ge,Gl,Ac,Ec]>=1)))&STAT_P[TS]>0
-((GPA[all]>=2.4)&((G[LL]>=C)|(G[AE]=B))&((G[GM]>=C)|(G[AM]>=C)))&STAT_P[TS]>0&COUNT_C[Ph,Bi,Ch]>=2
-((GPA[all]>=2.4)&((G[LL]>=C)|(G[AE]=B))&((G[AM]>=C)))&STAT_P[TS]>0&COUNT_C[Ph,Bi,Ch]>=3
+((COUNT_C[AM,GM]>=1)&(COUNT_C[LL,Bi,Ch,Ph]>=2))
+((COUNT_C[AM,GM]>=1)&(COUNT_C[LL,Bi,Ch,Ph]>=2))
+((COUNT_C[AM,GM]>=1)&(COUNT_C[LL,Bi,Ch,Ph]>=2))
+(COUNT_C[LL,AE]=1)&((G[AM]>=C)|(G[GM]>=B))&(G[Bi]>=C)&(COUNT_C[Ch,Ph]>=1)&(STAT_P[TS]>0)
+(GPA[all]>=3.2)&(COUNT_A[LL,AM,Bi]>=2)&(COUNT_B[LL,AM,Bi]=3)&(COUNT_C[Ph,Ch]>=2)
+(((COUNT_C[LL,AM,GM]>=2)&(G[Bi]>=C))&(G[BEST[Ph,Ch]]>=B)&(GPA[all]>=2.4))
+(((COUNT_C[LL,AM,GM]>=2)&(G[Bi]>=C))&(G[BEST[Ph,Ch]]>=B)&(GPA[all]>=2.4))
+((COUNT_B[Ch,AM,LL,AE,BEST[Bi,Ph]]>=3))&STAT_P[TS]>0
+((COUNT_B[Ch,AM,LL,AE,BEST[Bi,Ph]]>=3))&STAT_P[TS]>0
+(((GPA[all]>=2.8)&(G[LL]>=B))&(((G[GM]>B)|(G[AM]>C))&(COUNT_B[BS,Hi,Gr,Gl,Ac,Ec]>=1)))&STAT_P[TS]>0
+(((GPA[all]>=2.5)&(G[LL]>=B))&(((G[GM]>B)|(G[AM]>C))&(COUNT_B[BS,Hi,Gr,Gl,Ac,Ec]>=1)))&STAT_P[TS]>0
+(((GPA[all]>=2.1)&(G[LL]>=B))&(((G[GM]>B)|(G[AM]>C))&(COUNT_B[BS,Hi,Gr,Gl,Ac,Ec]>=1)))&STAT_P[TS]>0
+(((GPA[all]>=2.5)&(G[LL]>=B))&(((G[GM]>C)|(G[AM]>=C))&(COUNT_B[BS,Hi,Gr,Gl,Ac,Ec]>=1)))&STAT_P[TS]>0
+(((GPA[all]>=2.5)&(G[LL]>=B))&(((G[GM]>=C)|(G[AM]>=C))&(COUNT_B[BS,Hi,Gr,Gl,Ac,Ec]>=1)))&STAT_P[TS]>0
+(((GPA[all]>2.8)&(G[LL]>=B))&(((G[GM]>C)|(G[AM]>=C))&(COUNT_B[BS,Hi,Gr,Gl,Ac,Ec]>=1)))&STAT_P[TS]>0
+((GPA[all]>=2.4)&((G[LL]>=C)|(G[AE]>=B))&((G[GM]>=C)|(G[AM]>=C)))&STAT_P[TS]>0&COUNT_C[Ph,Bi,Ch]>=2
+((GPA[all]>=2.4)&((G[LL]>=C)|(G[AE]>=B))&((G[AM]>=C)))&STAT_P[TS]>0&COUNT_C[Ph,Bi,Ch]>=2
 ((GPA[all]>2.4)&((G[LL]>=C)|(G[AE]=B))&((G[AM]>=C)))&STAT_P[TS]>0&COUNT_C[Ph,Bi,Ch]>=3
 ((GPA[all]>2.4)&((G[LL]>=C)|(G[AE]=B))&((G[AM]>=C)))&STAT_P[TS]>0&COUNT_C[Ph,Bi,Ch]>=3
-((GPA[all]>=2.4)&((G[LL]>=C)|(G[AE]=B))&((G[AM]>=C)))&STAT_P[TS]>0&COUNT_C[Ph,Bi,Ch]>=3
+((GPA[all]>=2.4)&((G[LL]>=C)|(G[AE]>=B))&((G[AM]>=C)))&STAT_P[TS]>0&COUNT_C[Ph,Bi,Ch]>=2
 ((GPA[all]>=2.4)&((G[LL]>=C)|(G[AE]=B))&((G[GM]>=C)|(G[AM]>=C)))&STAT_P[TS]>0&COUNT_C[Ph,Bi,Ch]>=2
 ((GPA[all]>=2.4)&((G[LL]>=C)|(G[AE]=B))&((G[GM]>=C)|(G[AM]>=C)))&STAT_P[TS]>0&COUNT_C[Ph,Bi,Ch]>=2
 ((G[BEST[LL,AE]]>=C)&((G[AM]>=C)|(G[GM]>=C)))&STAT_P[TS]>0
-(((GPA[all]>2.25)&(COUNT_C[GM,AM,LL]=2))&(COUNT_C[Ph,Ch,Hi,Ge,Bi,Gl]>=1))&STAT_P[TS]>50
+(((GPA[all]>2.25)&(COUNT_C[GM,AM,LL]=2))&(COUNT_C[Ph,Ch,Hi,Gr,Bi,Gl]>=1))&STAT_P[TS]>50
 ((GPA[all]>2.0)&(COUNT_C[GM,AM,LL]=2))&STAT_P[TS]>0
-((GPA[LL,AM,GM,Ch,Ph,Bi]>=c)&(G[Bi]>=B))
-(G[WORST[LL,Ph,GM,Ch,Bi,Hi,Ge,AM,Ec,BS]]>=C)&(COUNT_B[LL,Ph,GM,Ch,Bi,Hi,Ge,AM,Ec,BS]>=1)
-(G[WORST[LL,GM,Ph,Ch,Bi,Hi,Ge,AM,Ec,BS]]>=C)&(COUNT_B[LL,GM,Ph,Ch,Bi,Hi,Ge,AM,Ec,BS]>=1)
-(GPA[ALL]>=2.25)
-(G[WORST[all]]>=C)
-(COUNT_C[LL,AE,Ch,Ph,Bi]>=3)&(COUNT_B[AM,GM]=1)
-(COUNT_C[LL,AE,Ch,Ph,Bi]>=3)&(COUNT_B[AM,GM]=1)
-(COUNT_C[LL,AE,Ch,Ph,Bi]>=3)&(COUNT_B[AM,GM]=1)
-(COUNT_C[LL,AE,Ch,Ph,Bi]>=3)&(COUNT_B[AM,GM]=1)
-(COUNT_C[LL,AE,Ch,Ph,Bi]>=3)&(COUNT_B[AM,GM]=1)
-(COUNT_C[LL,AE,Ch,Ph,Bi]>=3)&(COUNT_B[AM,GM]=1)
-(COUNT_C[LL,AE,Ch,Ph,Bi]>=3)&(COUNT_B[AM,GM]=1)
-(COUNT_C[LL,AE,Ch,Ph,Bi]>=3)&(COUNT_B[AM,GM]=1)
-(COUNT_C[LL,AE,Ch,Ph,Bi]>=3)&(COUNT_B[AM,GM]=1)
-(COUNT_C[LL,AE,Ch,Ph,Bi]>=3)&(COUNT_B[AM,GM]=1)
-(COUNT_C[LL,AE,Ch,Ph,Bi]>=3)&(COUNT_B[AM,GM]=1)
-(COUNT_C[LL,AE,Ch,Ph,Bi]>=3)&(COUNT_B[AM,GM]=1)
-(COUNT_C[LL,AE,Ch,Ph,Bi]>=3)&(COUNT_B[AM,GM]=1)
-(COUNT_C[LL,AE,Ch,Ph,Bi]>=3)&(COUNT_B[AM,GM]=1)
-(COUNT_C[LL,AE,Ch,Ph,Bi]>=3)&(COUNT_B[AM,GM]=1)
-(COUNT_C[LL,AE,Ch,Ph,Bi]>=3)&(COUNT_B[AM,GM]=1)
-(COUNT_C[LL,AE,Ch,Ph,Bi]>=3)&(COUNT_B[AM,GM]=1)
-(COUNT_C[LL,AE,Ch,Ph,Bi]>=3)&(COUNT_B[AM,GM]=1)
-(COUNT_C[LL,AE,Ch,Ph,Bi]>=3)&(COUNT_B[AM,GM]=1)
-(COUNT_C[LL,AE,Ch,Ph,Bi]>=3)&(COUNT_B[AM,GM]=1)
-(COUNT_C[LL,AE,Ch,Ph,Bi]>=3)&(COUNT_B[AM,GM]=1)
-GPA[all]>1.5
-((G[GM]>=C)|(G[AM]>=C))&((G[AE]>=C)|(G[LL]>=C))
-((G[GM]>=C)|(G[AM]>=C))&((G[AE]>=C)|(G[LL]>=C))
-((G[GM]>=C)|(G[AM]>=C))&((G[AE]>=C)|(G[LL]>=C))
-((G[GM]>=C)|(G[AM]>=C))&((G[AE]>=C)|(G[LL]>=C))
-((G[GM]>=C)|(G[AM]>=C))&((G[AE]>=C)|(G[LL]>=C))
-((G[GM]>=C)|(G[AM]>=C))&((G[AE]>=C)|(G[LL]>=C))
+(G[LL]>=B)&((G[AM]>=C)|(G[GM]>=B))&(COUNT_B[Bi,Ch]=2)
+(G[LL]>=B)&((G[AM]>=C)|(G[GM]>=B))&(COUNT_C[Bi,Ch,Ph,Gr,Hi,Ec,Ac,BS,LS]>=3)
+(G[LL]>=B)&((G[AM]>=C)|(G[GM]>=B))&(COUNT_C[Bi,Ch,Ph,Gr,Hi,Ec,Ac,BS,LS]>=3)
+(G[LL]>=B)&((G[AM]>=C)|(G[GM]>=B))&(COUNT_C[Bi,Ch,Ph,Gr,Hi,Ec,Ac,BS,LS]>=3)
+(GPA[all]>=2.5)&((G[LL]>=B)|(G[GM]>=B)|(G[Hi]>=C)|(G[Gr]>=C))
+GPA[all]>=2.5
+((G[AM]>=B)|(G[GM]=A))&((G[LL]>=B)|(G[AE]=A))&(COUNT_C[Ch,Ph,Bi]>=2)
+((G[AM]>=B)|(G[GM]=A))&((G[LL]>=B)|(G[AE]=A))&(COUNT_C[Ch,Ph,Bi]>=2)
+((G[AM]>=B)|(G[GM]=A))&((G[LL]>=B)|(G[AE]=A))&(COUNT_C[Ch,Ph,Bi]>=2)
+((G[AM]>=B)|(G[GM]=A))&((G[LL]>=B)|(G[AE]=A))&(COUNT_C[Ch,Ph,Bi]>=2)
+((G[AM]>=B)|(G[GM]=A))&((G[LL]>=B)|(G[AE]=A))&(COUNT_C[Ch,Ph,Bi]>=2)
+((G[AM]>=B)|(G[GM]=A))&((G[LL]>=B)|(G[AE]=A))&(COUNT_C[Ch,Ph,Bi]>=2)
+((G[AM]>=B)|(G[GM]=A))&((G[LL]>=B)|(G[AE]=A))&(COUNT_C[Ch,Ph,Bi]>=2)
+((G[AM]>=B)|(G[GM]=A))&((G[LL]>=B)|(G[AE]=A))&(COUNT_C[Ch,Ph,Bi]>=2)
+((G[AM]>=B)|(G[GM]=A))&((G[LL]>=B)|(G[AE]=A))&(COUNT_C[Ch,Ph,Bi]>=2)
+((G[AM]>=B)|(G[GM]=A))&((G[LL]>=B)|(G[AE]=A))&(COUNT_C[Ch,Ph,Bi]>=2)
+((G[AM]>=B)|(G[GM]=A))&((G[LL]>=B)|(G[AE]=A))&(COUNT_C[Ch,Ph,Bi]>=2)
+((G[AM]>=B)|(G[GM]=A))&((G[LL]>=B)|(G[AE]=A))&(COUNT_C[Ch,Ph,Bi]>=2)
+((G[AM]>=B)|(G[GM]=A))&((G[LL]>=B)|(G[AE]=A))&(COUNT_C[Ch,Ph,Bi]>=2)
+((G[AM]>=B)|(G[GM]=A))&((G[LL]>=B)|(G[AE]=A))&(COUNT_C[Ch,Ph,Bi]>=2)
+((G[AM]>=B)|(G[GM]=A))&((G[LL]>=B)|(G[AE]=A))&(COUNT_C[Ch,Ph,Bi]>=2)
+((G[AM]>=B)|(G[GM]=A))&((G[LL]>=B)|(G[AE]=A))&(COUNT_C[Ch,Ph,Bi]>=2)
+((G[AM]>=B)|(G[GM]=A))&((G[LL]>=B)|(G[AE]=A))&(COUNT_C[Ch,Ph,Bi]>=2)
+((G[AM]>=B)|(G[GM]=A))&((G[LL]>=B)|(G[AE]=A))&(COUNT_C[Ch,Ph,Bi]>=2)
+((G[AM]>=B)|(G[GM]=A))&((G[LL]>=B)|(G[AE]=A))&(COUNT_C[Ch,Ph,Bi]>=2)
+((G[AM]>=B)|(G[GM]=A))&((G[LL]>=B)|(G[AE]=A))&(COUNT_C[Ch,Ph,Bi]>=2)
+((G[AM]>=B)|(G[GM]=A))&((G[LL]>=B)|(G[AE]=A))&(COUNT_C[Ch,Ph,Bi]>=2)
+((G[AM]>=B)|(G[GM]=A))&((G[LL]>=B)|(G[AE]=A))&(COUNT_C[Ch,Ph,Bi]>=2)
+(GPA[all]>=2.2)
+(GPA[all]>=2.2)
+GPA[all]>=2.5
+GPA[all]>=2.5
+GPA[all]>=2.5
+GPA[all]>2.2
+GPA[all]>=2.5
+GPA[all]>=1.75 & G[BEST[LL,AE]]>=C & G[BEST[AM,GM]]>=C & G[BEST[Hi,Ec,Ac,BS]]>=D
+GPA[all]>=1.75 & G[BEST[LL,AE]]>=C & G[BEST[AM,GM]]>=C & G[BEST[Hi,Ec,Ac,BS]]>=D
+GPA[all]>=1.75 & G[BEST[LL,AE]]>=C & G[BEST[AM,GM]]>=C & G[BEST[Hi,Ec,Ac,BS]]>=D
+GPA[all]>=1.75 & G[BEST[LL,AE]]>=C & G[BEST[AM,GM]]>=C & G[BEST[Hi,Ec,Ac,BS]]>=D
+GPA[all]>=1.75 & G[BEST[LL,AE]]>=C & G[BEST[AM,GM]]>=C & G[BEST[Hi,Ec,Ac,BS]]>=D
+(G[LL]>=B)&((G[AM]>=C)|(G[GM]>=B))&(COUNT_B[Bi,Ch]=2)
+GPA[all]>2.2
+GPA[all]>2.5
+COUNT_C[Bi,Ch,GM,AM,LL]>=2
+COUNT_C[Bi,Ch,GM,AM,LL]>=2
+COUNT_C[Bi,Ch,GM,AM,LL]>=2
+(((COUNT_C[LL,AM,GM]>=2)&(G[Bi]>=C))&(G[BEST[Ph,Ch]]>=B)&(GPA[all]>=2.5))
+(((COUNT_C[LL,AM,GM]>=2)&(G[Bi]>=C))&(G[BEST[Ph,Ch]]>=B)&(GPA[all]>=2.5))
+(((COUNT_C[LL,AM,GM]>=2)&(G[Bi]>=C))&(G[BEST[Ph,Ch]]>=B)&(GPA[all]>=2.5))
+(((COUNT_C[LL,AM,GM]>=2)&(G[Bi]>=C))&(G[BEST[Ph,Ch]]>=B)&(GPA[all]>=2.5))
+(((COUNT_C[LL,AM,GM]>=2)&(G[Bi]>=C))&(G[BEST[Ph,Ch]]>=B)&(GPA[all]>=2.5))
+GPA[all]>2
+(G[WORST[all]]>=2)
+(G[WORST[all]]>=2)
+(((COUNT_C[LL,AM,GM]>=2)&(G[Ec]>=C))&(G[BEST[Hi,Gr]]>=B)&(GPA[all]>=3.0))
+(((COUNT_C[LL,AM,GM]>=2)&(G[Ec]>=C))&(G[BEST[Hi,Gr]]>=B)&(GPA[all]>=3.0))
+GPA[all]>=2.5
+GPA[all]>=2.5
+GPA[all]>=2.5
+(G[BEST[LL,AE]]>=B)&(G[AM]>=B)&(COUNT_B[Bi,Ch]=2)
+(G[BEST[LL,AE]]>=B)&(G[AM]>=B)&(COUNT_B[Bi,Ch, Ph]>=2)
+(G[BEST[LL,AE]]>=B)&(G[AM]>=B)&(COUNT_B[Bi,Ch, Ph]>=2)
+(G[BEST[LL,AE]]>=B)&(G[AM]>=B)&(COUNT_B[Bi,Ch, Ph]>=2)
+(G[BEST[LL,AE]]>=B)&(G[AM]>=B)&(COUNT_B[Bi,Ch, Ph]>=2)
+(G[BEST[LL,AE]]>=B)&(G[AM]>=B)&(COUNT_B[Bi,Ch, Ph]>=2)
+(G[LL]>=B)&(G[Gr]>=B)
+(G[LL]>=B)&(G[Gr]>=B)
+(G[LL]>=B)&(G[Gr]>=B)
+(G[LL]>=B)&(G[Gr]>=B)
+(G[LL]>=B)&(G[Hi]>=B)
+(G[LL]>=B)&(G[Hi]>=B)
+(G[LL]>=B)&(G[Hi]>=B)
+(G[LL]>=B)&(G[Hi]>=B)
+(G[Gr]>=B)&(G[Hi]>=B)
+(G[Gr]>=B)&(G[Hi]>=B)
+(G[Gr]>=B)&(G[Hi]>=B)
+(G[Gr]>=B)&(G[Hi]>=B)
+GPA[all]>1.75
+GPA[all]>1.75
+GPA[all]>1.75
+GPA[all]>1.75
+GPA[all]>1.75
+(G[WORST[LL,GM,BS,Gr,IT,Hi,Ac]]>=2)
+GPA[all]>2.2
+GPA[all]>=2.5
+GPA[all]>=2.5
+GPA[all]>=2.5
+((G[LL]>=C)|(G[AE]>=B))&((G[AM]>=C)|(G[GM]>=B))&(G[WORST[all]]>=C)
+((G[LL]>=C)|(G[AE]>=B))&((G[AM]>=C)|(G[GM]>=B))&(G[WORST[all]]>=C)

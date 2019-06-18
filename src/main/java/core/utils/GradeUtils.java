@@ -3,6 +3,12 @@ package core.utils;
 public class GradeUtils {
 
     public static int toNumber(String grade){
+
+        if(grade == null){
+            // if there is not value for subject, then return 0 as default grade
+            return 0;
+        }
+
         if("A".equalsIgnoreCase(grade)){
             return 4;
         }

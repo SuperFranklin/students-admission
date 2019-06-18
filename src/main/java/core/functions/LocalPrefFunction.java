@@ -16,7 +16,7 @@ public class LocalPrefFunction implements Function {
      */
     @Override
     public String calculate() {
-        return parameters.get("LOCAL_PREF");
+        return parameters.getOrDefault("LOCAL_PREF","0");
     }
 
 }
